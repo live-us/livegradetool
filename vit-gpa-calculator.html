@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveGrade">
     <meta name="twitter:creator" content="@Usama">
-    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
-    <link rel="shortcut icon" href="/src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/src/favicon.ico">
     <link rel="stylesheet" href="/src/style.css">
+
 
     <!-- Page Title -->
     <title>VIT GPA Calculator 2026 &ndash; Semester Wise, CGPA &amp; Percentage</title>
@@ -31,8 +30,7 @@
 
     <!-- Page Canonical URL -->
     <link rel="canonical" href="https://livegrade.site/vit-gpa-calculator.html">
-    <meta property="og:url" content="https://livegrade.site/vit-gpa-calculator.html">
-
+    
 
     <!-- Page Description -->
     <meta content="Calculate your VIT SGPA and CGPA instantly using the official credit-based grading system of Vellore Institute of Technology in India. Fast, free, and accurate tool for all VIT students.
@@ -48,192 +46,9 @@
     <meta name="keywords"
         content="VIT GPA Calculator 2026, VIT CGPA Calculator, VIT SGPA to CGPA, VIT Percentage Calculator, VIT Chennai GPA, VIT Vellore Grading System, VIT Grade Improvement Calculator, VTOP GPA Calculator">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta property="og:image" content="https://livegrade.site/src/img/vit-cgpa-calculator.webp">
-    <meta name="twitter:image" content="https://livegrade.site/src/img/vit-cgpa-calculator.webp">
-
-    <meta property="og:image" content="https://livegrade.site/src/img/vit-sgpa-calculator.webp">
-    <meta name="twitter:image" content="https://livegrade.site/src/img/vit-sgpa-calculator.webp">
 
 
-    <style>
-        .tool {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 24px;
-            box-sizing: border-box;
-            border-radius: 8px;
-            box-shadow: 0px 0px 8px gainsboro;
-            background: white;
-        }
-
-        .input-section {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .input-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 24px 16px;
-            border-bottom: 1px solid #ddd;
-            align-items: flex-end;
-            animation: fadeIn 0.3s ease-in;
-            background-color: #fff;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* The Red Delete Button */
-        .btn-del {
-            background-color: red;
-            width: 37px;
-            height: 37px;
-            padding: 6px;
-            border-radius: 4px;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .input {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            min-width: 120px;
-        }
-
-        label {
-            font-size: 12px;
-            margin-bottom: 4px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .btn-section {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 20px 0px;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .btn-section>button {
-            padding: 10px 24px;
-            border-radius: 20px;
-            background-color: #FDD023;
-            /* LSU Gold */
-            border: none;
-            color: #2e2d2d;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s ease-in;
-        }
-
-        .btn-section>button.secondary {
-            background-color: transparent;
-            border: 1px solid #ccc;
-        }
-
-        .btn-section>button:hover,
-        .btn-del:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .result-section {
-            display: none;
-            /* Dynamic show */
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-            border-top: 2px solid #eee;
-            padding-top: 20px;
-        }
-
-        .result-section>* {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            flex-grow: 1;
-            gap: 4px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        .result-section>*>h2 {
-            color: #461D7C;
-            margin: 0;
-            font-size: 28px;
-        }
-
-        .result-section>*>small {
-            color: rgb(107, 107, 107);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-        }
-
-        .prior-data {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #e1e4e8;
-        }
-
-        .prior-header {
-            font-weight: bold;
-            color: #461D7C;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        /* Custom Tab Styling using your shade variables */
-        .tab-switcher {
-            display: flex;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-
-        .tab-btn {
-            background: var(--shade-4);
-            color: var(--shade-2);
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .tab-btn.active {
-            background: var(--focus);
-            color: white;
-        }
-    </style>
-
-
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -252,7 +67,7 @@
 </script>
 
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -286,7 +101,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -316,7 +131,7 @@
 }
 </script>
 
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -341,125 +156,108 @@
 }
 </script>
 
-    
+
+    <!-- Google Analytec -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YSXB5G97K8');
-    </script>
+    </script> 
 
-     
+    <!-- Google Adsens
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script> 
+    -->
+
+    <!-- Monetag Scripts -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
     
 
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <a href="/" class="logo"><img src="/src/header-logo.png" alt="LiveGrade - Advanced GPA Calculation Tools"
-                    loading="lazy" width="32" height="30">Live
-                Grade</a>
-            <nav id="navLinks" class="effect">
-                <img src="/src/close-menu-button.svg" alt="menu close icon" width="25" height="25" onclick="navBar()"
-                    aria-hidden="true">
+    <header class="clm cent">
+        <div class="header cent">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35"> Live Grade</a>
+            <nav id="navLinks" class="effect cent" aria-label="Primary Navigation">
+
+                <button type="button" class="menu-btn" onclick="navBar(event)">
+                    <img src="/src/close-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+                </button>
                 <a href="/">Home</a>
-                <!-- <a href="#faqs">FAQs</a>
-                <a href="#how-to-use">How to Use</a>
-                <a href="#how-it-works">How It Works</a> -->
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+                <!-- <a href="#">Our Tools</a>
+                <a href="#">Our Articles</a> -->
             </nav>
-            <img src="/src/open-menu-button.svg" alt="open menu icon" width="25" height="25" onclick="navBar()"
-                style="cursor: pointer;">
+            <button type="button" class="menu-btn" onclick="navBar(event)">
+                <img src="/src/open-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+            </button>
         </div>
     </header>
 
+
     <main>
-        <section class="clm">
-            <img src="/src/img/vellore-institute-of-technology-vit-gpa-calculator.webp"
-                alt="Vellore Institute of Technology (VIT) GPA calculateing tool its perfect for semester wise GPA and CGPA"
-                width="120" height="128" style="width: 120px; align-self: center;">
-            <h1 style="text-align: center;">VIT GPA Calculator &ndash; SGPA &amp; CGPA for Vellore Institute of
-                Technology</h1>
-            <p style="text-align: center;">This VIT GPA Calculator is engineered according to the official 10-point
-                Credit-Based Grading System (CBGS)
-                utilized by <a href="https://vit.ac.in/academics-overview" target="_blank"
-                    rel="noopener noreferrer" class="clr">Vellore Institute of Technology (VIT)</a>.
-                It accurately calculates your semester-wise GPA (SGPA) and Cumulative GPA (CGPA) using the standard
-                credit-weighted methodology.</p>
+        <header class="clm cent">
+            <div class="text clm cent">
+                <img src="/src/logo.png" alt="" width="50" height="65" style="width: 70px;">
+                <h1 style="text-align: center;">VIT GPA Calculator &ndash; SGPA &amp; CGPA for Vellore Institute of
+                    Technology</h1>
+                <p>This VIT GPA Calculator is engineered according to the official 10-point
+                    Credit-Based Grading System (CBGS)
+                    utilized by <a href="https://vit.ac.in/academics/home" target="_blank" rel="noopener noreferrer"
+                        class="clr">Vellore Institute of Technology (VIT)</a>.
+                    It accurately calculates your semester-wise GPA (SGPA) and Cumulative GPA (CGPA) using the standard
+                    credit-weighted methodology.</p>
+            </div>
+        </header>
 
 
+        <div class="tool clm" style="align-self: center; justify-self: center; margin-top: -100px;">
 
-            <div class="tool">
-                <!-- <h1 style="color: var(--shade-1); margin-bottom: 8px;">VIT GPA Calculator</h1>
-                <p style="color: var(--shade-2); font-size: 14px; margin-bottom: 24px;">This VIT GPA Calculator is a simple and accurate online tool designed for students of Vellore Institute of Technology (VIT) to calculate their SGPA and CGPA easily. </p> -->
-                <p style="color: var(--shade-2); font-size: 14px; margin-bottom: 24px;">Simply enter your subject
-                    credits and final letter grades to see your results.
-                    The tool applies the official VIT academic regulations instantly&mdash;eliminating the need for
-                    complex spreadsheets or manual formulas.</p>
+            <form id="course-form" action="#" onsubmit="return false;" class="clm"></form>
 
-                <div class="tab-switcher" role="tablist">
-                    <div class="tab-btn active" role="tab" aria-selected="true" tabindex="0"
-                        onclick="switchTab('sgpa', this)">SGPA</div>
-                    <div class="tab-btn" role="tab" aria-selected="false" tabindex="0"
-                        onclick="switchTab('cgpa', this)">CGPA</div>
-                </div>
-
-                <div id="sgpa-panel" class="panel" role="tabpanel">
-                    <div class="prior-data">
-                        <span class="prior-header">Quick Setup</span>
-                        <div class="wraper">
-                            <div class="input">
-                                <label for="sgpa-count">Total Subjects</label>
-                                <input type="number" id="sgpa-count" value="3" min="1">
-                            </div>
-                            <button onclick="generateRows()"
-                                style="background: var(--shade-1); color: white; border-radius: 4px; padding: 0 15px; cursor: pointer;">
-                                Set Grid
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="input-section" id="sgpa-rows">
-                        <!-- Dynamic rows will be injected here with proper labels -->
-                    </div>
-
-                    <div class="btn-section">
-                        <button class="secondary" onclick="addSingleRow()">+ Add Subject</button>
-                        <button onclick="calculateSGPA()">Calculate SGPA</button>
-                    </div>
-                </div>
-
-                <div id="cgpa-panel" class="panel" style="display:none;" role="tabpanel">
-                    <div class="input-section" id="cgpa-rows">
-                        <!-- Dynamic rows will be injected here with proper labels -->
-                    </div>
-                    <div class="btn-section">
-                        <button class="secondary" onclick="addCgpaRow()">+ Add Semester</button>
-                        <button onclick="calculateCGPA()">Calculate CGPA</button>
-                    </div>
-                </div>
-
-                <div class="result-section" id="result-display" aria-live="polite">
-                    <div>
-                        <small id="res-label">Final Score</small>
-                        <h2 id="res-value">0.00</h2>
-                    </div>
-                    <div>
-                        <small>Percentage</small>
-                        <h2 id="res-percent">0%</h2>
-                    </div>
-                </div>
+            <div class="wrap btn-section" style="width: 100%; justify-content: flex-end;">
+                <button type="button" onclick="addCourse()" class="btn">Add Course</button>
+                <button type="button" onclick="calculateGPA()" class="btn">Calculate GPA</button>
+                <button type="reset" onclick="resetCalculator()" class="btn">Reset All</button>
             </div>
 
-        </section>
+            <ul class="wrap" style="margin-top: 32px;">
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="grade_point_average">0.00</output>
+                    <strong>Grade Point Average</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="quality_points">0.00</output>
+                    <strong>Quality Points</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_hours">0.00</output>
+                    <strong>Credit Hours</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_courses">0.00</output>
+                    <strong>Total Courses</strong>
+                </li>
+            </ul>
+        </div>
 
 
 
-        <hr>
-        <section class="clm" id="vit-grading-scale">
+
+
+
+
+        
+        <section class="clm cent" id="vit-grading-scale">
 
             <h2>VIT Grading Scale &amp; Mapping</h2>
             <p>
@@ -530,7 +328,7 @@
 
 
             <h3>How the Grading System Works</h3>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><strong>Credit Weightage:</strong> Each subject&rsquo;s grade point is multiplied by its credit
                     value.</li>
                 <li><strong>Impact Factor:</strong> Courses with higher credits have a significantly greater impact on
@@ -561,7 +359,7 @@
 
 
         <hr>
-        <section class="clm" id="how-gpa-is-calculated">
+        <section class="clm cent" id="how-gpa-is-calculated">
 
             <h2>How GPA is Calculated in VIT</h2>
             <p>
@@ -573,7 +371,7 @@
             </p>
 
             <p>To calculate your GPA, three factors are considered:</p>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><strong>Credit Value:</strong> The weightage assigned to the course.</li>
                 <li><strong>Letter Grade:</strong> Your performance rank (S, A, B, etc.).</li>
                 <li><strong>Grade Point:</strong> The numerical value of your letter grade (e.g., S = 10).</li>
@@ -605,7 +403,7 @@
             </blockquote>
 
             <h3>Steps to Calculate Your GPA Manually</h3>
-            <ol>
+            <ol class="clm" style="padding-left: 28px;">
                 <li>Convert each letter grade into its corresponding grade point (S=10, A=9, etc.).</li>
                 <li>Multiply the grade points by the course credits for each subject.</li>
                 <li>Sum all the resulting credit points.</li>
@@ -633,7 +431,7 @@
 
 
         <hr>
-        <section class="clm">
+        <section class="clm cent">
             <h2>How Our VIT GPA Calculator Works</h2>
             <p>
                 Our tool is meticulously programmed to follow the official credit-based grading methodology used at
@@ -642,7 +440,7 @@
                 It ensures precise SGPA and CGPA results based on the 10-point Credit-Based Grading System (CBGS).
             </p>
 
-            <ol style="gap: 28px;">
+            <ol class="clm" style="padding-left: 28px;">
                 <li class="clm">
                     <strong>Step 1: Grade Point Conversion</strong>
                     <p>
@@ -692,9 +490,7 @@
 
 
 
-
-        <hr>
-        <section class="clm" id="how-to-use-calculator">
+        <section class="clm cent" id="how-to-use-calculator">
 
             <h2>How to Use the VIT GPA Calculator</h2>
             <p>
@@ -704,7 +500,7 @@
 
             <div class="instruction-box">
                 <h3>Steps to Calculate SGPA (Semester GPA)</h3>
-                <ol>
+                <ol class="clm" style="padding-left: 28px;">
                     <li><strong>Enter Subjects:</strong> Input the total number of subjects you are tracking for the
                         current semester.</li>
                     <li><strong>Assign Credits:</strong> Enter the specific credit value (e.g., 1, 2, 3, or 4) for each
@@ -720,7 +516,7 @@
 
             <div class="instruction-box">
                 <h3>Steps to Calculate CGPA (Cumulative GPA)</h3>
-                <ol>
+                <ol class="clm" style="padding-left: 28px;">
                     <li><strong>Input Previous Data:</strong> Enter your SGPA for all completed semesters.</li>
                     <li><strong>Total Credits:</strong> Input the total credits earned in each of those semesters.</li>
                     <li><strong>Click Calculate CGPA:</strong> The tool will aggregate your entire academic history.
@@ -738,7 +534,7 @@
                     target="_blank" rel="noopener noreferrer" class="clr">VIT Chennai</a> and other campuses prefer our digital
                 calculator for several reasons:
             </p>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><strong>Eliminates Manual Errors:</strong> Manual math often leads to small mistakes that can
                     significantly distort your true CGPA.</li>
                 <li><strong>Saves Time:</strong> Get instant results during busy exam seasons without building your own
@@ -757,7 +553,7 @@
 
 
         <hr>
-        <section class="clm" id="tool-features">
+        <section class="clm cent" id="tool-features">
 
             <h2>Features of Our VIT GPA Calculator</h2>
             <p>
@@ -767,7 +563,7 @@
 
             <div class="feature-item">
                 <h3>1. Accurate Credit-Weighted Calculation</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Strictly adheres to the official VIT grading system and credit-based GPA methodology.</li>
                     <li>Precisely computes SGPA and CGPA, including robust <strong>semester-wise GPA tracking</strong>.
                     </li>
@@ -778,7 +574,7 @@
 
             <div class="feature-item">
                 <h3>2. Instant &amp; Automated Results</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Simply enter your grades and credits to receive calculated results in real-time.</li>
                     <li>Eliminates the risks of manual errors associated with complex spreadsheets.</li>
                     <li>Optimized for all <a href="https://chennai.vit.ac.in/" target="_blank"
@@ -788,7 +584,7 @@
 
             <div class="feature-item">
                 <h3>3. Intuitive User Interface</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Designed for ease of use&mdash;no technical expertise or manual formula knowledge required.</li>
                     <li>Minimalist input fields ensure a smooth experience for quick semester-to-semester comparisons.
                     </li>
@@ -797,7 +593,7 @@
 
             <div class="feature-item">
                 <h3>4. Fully Mobile-Responsive</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>The tool is fully responsive, performing flawlessly on smartphones, tablets, and desktops.</li>
                     <li>Check your standing anytime, whether you are on campus or at home.</li>
                 </ul>
@@ -805,7 +601,7 @@
 
             <div class="feature-item">
                 <h3>5. Free &amp; Anonymous Access</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Completely free for every student across all VIT campuses.</li>
                     <li>No registration, login, or account creation is required to access full functionality.</li>
                 </ul>
@@ -813,7 +609,7 @@
 
             <div class="feature-item">
                 <h3>6. Secure &amp; Private Computation</h3>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li><strong>Privacy First:</strong> All calculations are processed locally in your browser.</li>
                     <li>Your grades, credits, and personal academic data are never stored or shared with external
                         servers.</li>
@@ -827,7 +623,7 @@
 
 
         <hr>
-        <section class="clm" id="use-cases">
+        <section class="clm cent" id="use-cases">
 
             <h2>Use Cases: Why Students Rely on the VIT GPA Calculator</h2>
             <p>
@@ -886,7 +682,7 @@
 
 
         <hr>
-        <section class="clm" id="about-developer">
+        <section class="clm cent" id="about-developer">
             <h2>About the Developer</h2>
             <p>
                 The VIT GPA Calculator was developed by <strong>Usama Saeed</strong>, a web developer specializing in
@@ -909,7 +705,7 @@
                 a trustworthy,
                 error-free alternative to manual spreadsheets. The primary goals of this tool are:
             </p>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><strong>Accuracy:</strong> Following official 10-point grading rules, including the
                     <code>CGPA &times; 10</code> percentage conversion.
                 </li>
@@ -924,10 +720,10 @@
 
         <hr>
 
-        <section class="clm" id="sources">
+        <section class="clm cent" id="sources">
             <h3>Sources &amp; Official References</h3>
             <p>This tool is built using data from the following official academic guidelines:</p>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><a href="https://vit.ac.in/sites/default/files/academic/Academic-Regulations.pdf" target="_blank"
                         rel="noopener noreferrer" class="clr">VIT Academic Regulations (FFCS &amp; CBGS)</a></li>
                 <li><a href="https://vtop.vit.ac.in/" target="_blank" rel="nofollow" class="clr">VIT VTOP Student Portal &ndash;
@@ -939,7 +735,7 @@
 
 
         <hr>
-        <section class="clm">
+        <section class="clm cent">
 
             <p><strong>Disclaimer:</strong> This VIT GPA Calculator is an independent academic tool and is
                 <strong>not</strong> officially affiliated with Vellore Institute of Technology (VIT).
@@ -954,187 +750,174 @@
 
         </section>
 
-
-
     </main>
 
-
-    <footer>
-        <div class="footer clm">
-            <a href="/" class="logo">
-                <img src="/src/footer-logo.png" alt="Live Grade CASPA GPA calculator logo for PA school applicants"
-                    title="Live Grade GPA Calculator Tool" width="32" height="30">
-                Live Grade
-            </a>
-
-            <p>
-                Calculate your VIT GPA instantly with the VIT GPA Calculator by Live Grade. This tool helps VIT students
+    <footer class="clm cent">
+        <div class="clm">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35" loading="lazy"> Live Grade</a>
+            <p>Calculate your VIT GPA instantly with the VIT GPA Calculator by Live Grade. This tool helps VIT students
                 accurately estimate their SGPA and CGPA using the official VIT credit-based grading system in a fast,
-                simple, and reliable way.
-            </p>
+                simple, and reliable way.</p>
+            <div class="wrap cent" aria-label="Brand Information"
+                style="justify-content: space-between; margin-top: 20px;">
+                <div class="wrap cent social" aria-label="Social Media">
+                    <a href="mailto:usama.saeed.free@gmail.com" class="wrap cent"><img src="/src/email-contact.svg"
+                            alt="Email icon" width="25" height="25">Email</a>
 
-            <a href="mailto:usama.saeed.free@gmail.com" class="email">
-                Email: usama.saeed.free@gmail.com
-            </a>
+                    <a href="https://web.facebook.com/profile.php?id=100081021373803" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/facebook-profile.svg" alt="Facebook icon" width="25" height="25">Facebook</a>
 
-            <div class="wraper">
-                <div class="wraper site effect">
+                    <a href="https://www.instagram.com/saeedusama313/" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/instagram-profile.svg" alt="Instagram icon" width="25" height="25">Instagram</a>
+
+                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/linkedin-profile.svg" alt="LinkedIn icon" width="25" height="25">LinkedIn</a>
+                </div>
+                <div class="wrap cent effect" aria-label="Footer Navigation">
                     <a href="/">Home</a> |
                     <a href="/about-us.html">About Us</a> |
                     <a href="/contact-us.html">Contact Us</a> |
                     <a href="/privacy-policy.html">Privacy Policy</a> |
-                    <a href="/terms-and-conditions.html">Terms and Conditions</a> |
+                    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
                     <a href="/disclaimer.html">Disclaimer</a>
-                </div>
-
-                <div class="wraper social-media effect">
-                    <a href="https://web.facebook.com/profile.php?id=100081021373803" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="/src/facebook-profile.svg" alt="Live Grade GPA calculator Facebook profile" width="25"
-                            height="25">
-                        Visit Facebook
-                    </a>
-
-                    <a href="https://www.instagram.com/saeedusama313/" target="_blank" rel="noopener noreferrer">
-                        <img src="/src/instagram-profile.svg" alt="Live Grade CASPA GPA calculator Instagram profile"
-                            width="25" height="25">
-                        Visit Instagram
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="/src/linkedin-profile.svg" alt="Live Grade GPA calculator LinkedIn profile" width="25"
-                            height="25">
-                        Visit LinkedIn
-                    </a>
                 </div>
             </div>
         </div>
-
-        <hr>
-        <small>&copy; 2025 Live Grade. All Rights Reserved.</small>
+        <p class="copyright logo">&copy; <time datetime="2026">2026 </time> Live Grade. All rights reserved.</p>
     </footer>
 
     <script>
-        // Navigation Bar
-        function navBar() {
-            const navLinks = document.getElementById("navLinks");
-            if (navLinks) navLinks.classList.toggle("show");
+        const nav = document.getElementById("navLinks");
+
+        function navBar(event) {
+            event.stopPropagation(); // prevent document click
+            nav.classList.toggle("show");
         }
 
-        const sgpaRows = document.getElementById('sgpa-rows');
-        const cgpaRows = document.getElementById('cgpa-rows');
-        const resultDisplay = document.getElementById('result-display');
-
-        function switchTab(type, el) {
-            document.querySelectorAll('.tab-btn').forEach(b => {
-                b.classList.remove('active');
-                b.setAttribute('aria-selected', 'false');
-            });
-            el.classList.add('active');
-            el.setAttribute('aria-selected', 'true');
-
-            document.getElementById('sgpa-panel').style.display = type === 'sgpa' ? 'block' : 'none';
-            document.getElementById('cgpa-panel').style.display = type === 'cgpa' ? 'block' : 'none';
-            resultDisplay.style.display = 'none';
+        // Close when clicking or touching outside nav
+        function closeOnOutside(event) {
+            if (nav.classList.contains("show") && !nav.contains(event.target)) {
+                nav.classList.remove("show");
+            }
         }
 
-        let courseCount = 0;
-        function addSingleRow() {
-            courseCount++;
-            const row = document.createElement('div');
-            row.className = 'input-row';
-            row.innerHTML = `
-        <div class="input">
-            <label for="course-name-${courseCount}">Course Name</label>
-            <input id="course-name-${courseCount}" type="text" placeholder="e.g. CSE1001">
-        </div>
-        <div class="input">
-            <label for="credits-${courseCount}">Credits</label>
-            <input id="credits-${courseCount}" type="number" class="credits" placeholder="0">
-        </div>
-        <div class="input">
-            <label for="grade-${courseCount}">Grade</label>
-            <select id="grade-${courseCount}" class="grade">
-                <option value="10">S (10)</option>
-                <option value="9">A (9)</option>
-                <option value="8">B (8)</option>
-                <option value="7">C (7)</option>
-                <option value="6">D (6)</option>
-                <option value="5">E (5)</option>
-                <option value="0">F/N (0)</option>
-            </select>
-        </div>
-        <div class="btn-del">
-            <button type="button" onclick="this.closest('.input-row').remove()" aria-label="Remove subject">✕</button>
-        </div>
-    `;
-            sgpaRows.appendChild(row);
+        // Close on scroll
+        function closeOnScroll() {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+            }
         }
 
-        let semCount = 0;
-        function addCgpaRow() {
-            semCount++;
-            const row = document.createElement('div');
-            row.className = 'input-row';
-            row.innerHTML = `
-        <div class="input">
-            <label for="sem-sgpa-${semCount}">Semester SGPA</label>
-            <input id="sem-sgpa-${semCount}" type="number" class="sem-sgpa" step="0.01" placeholder="8.50">
-        </div>
-        <div class="input">
-            <label for="sem-credits-${semCount}">Semester Credits</label>
-            <input id="sem-credits-${semCount}" type="number" class="sem-credits" placeholder="20">
-        </div>
-        <div class="btn-del">
-            <button type="button" onclick="this.closest('.input-row').remove()" aria-label="Remove semester">✕</button>
-        </div>
-    `;
-            cgpaRows.appendChild(row);
-        }
-
-        function generateRows() {
-            sgpaRows.innerHTML = '';
-            const count = parseInt(document.getElementById('sgpa-count').value) || 1;
-            for (let i = 0; i < count; i++) addSingleRow();
-        }
-
-        function calculateSGPA() {
-            let totalC = 0, weightedS = 0;
-            document.querySelectorAll('#sgpa-rows .input-row').forEach(row => {
-                const c = parseFloat(row.querySelector('.credits').value) || 0;
-                const g = parseFloat(row.querySelector('.grade').value) || 0;
-                totalC += c;
-                weightedS += (c * g);
-            });
-            showResult(totalC > 0 ? weightedS / totalC : 0, "Semester SGPA");
-        }
-
-        function calculateCGPA() {
-            let totalC = 0, weightedS = 0;
-            document.querySelectorAll('#cgpa-rows .input-row').forEach(row => {
-                const s = parseFloat(row.querySelector('.sem-sgpa').value) || 0;
-                const c = parseFloat(row.querySelector('.sem-credits').value) || 0;
-                totalC += c;
-                weightedS += (s * c);
-            });
-            showResult(totalC > 0 ? weightedS / totalC : 0, "Cumulative CGPA");
-        }
-
-        function showResult(val, label) {
-            resultDisplay.style.display = 'flex';
-            resultDisplay.setAttribute('aria-live', 'polite');
-            document.getElementById('res-value').innerText = val.toFixed(2);
-            document.getElementById('res-label').innerText = label;
-            document.getElementById('res-percent').innerText = (val * 10).toFixed(1) + "%";
-            resultDisplay.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Initialize
-        generateRows();
-        addCgpaRow();
-        addCgpaRow();
+        document.addEventListener("click", closeOnOutside);
+        document.addEventListener("touchstart", closeOnOutside);
+        window.addEventListener("scroll", closeOnScroll);
 
     </script>
+
+
+    <script>
+        let id = 0;
+        function addCourse() {
+            id++;
+            const form = document.getElementById('course-form');
+            const newFieldset = document.createElement('fieldset');
+            newFieldset.className = 'wrap';
+
+            newFieldset.innerHTML = `<legend class="sr-only">Course ${id}</legend>
+            <div class="clm" style="gap: 8px;">
+                <label for="course_name_${id}">Course Name (Optional)</label>
+                <input type="text" id="course_name_${id}" placeholder="e.g. Physics">
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="grade_${id}">Grade</label>
+                <select id="grade_${id}" required>
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="10">S (10)</option>
+                    <option value="9">A (9)</option>
+                    <option value="8">B (8)</option>
+                    <option value="7">C (7)</option>
+                    <option value="6">D (6)</option>
+                    <option value="5">E (5)</option>
+                    <option value="0">F/N (0)</option>
+                </select>
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="credits_${id}">Credits</label>
+                <input type="number" id="credits_${id}"  min="0.5" step="0.5" required placeholder="3">
+            </div>
+            <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+            </button>`
+            form.appendChild(newFieldset);
+        }
+
+        function removeCourse(button) {
+            button.closest(".wrap").remove();
+            id--;
+        }
+
+
+        function calculateGPA() {
+
+            const courses = document.querySelectorAll("#course-form .wrap");
+
+            let totalQualityPoints = 0;
+            let totalCredits = 0;
+            let totalCourses = 0;
+
+            courses.forEach(course => {
+
+                const grade = parseFloat(course.querySelector("select").value);
+                const credits = parseFloat(course.querySelector("input[type='number']").value);
+
+                if (!isNaN(grade) && !isNaN(credits)) {
+
+                    const qualityPoints = grade * credits;
+
+                    totalQualityPoints += qualityPoints;
+                    totalCredits += credits;
+                    totalCourses++;
+
+                }
+
+            });
+
+            const gpa = totalCredits ? totalQualityPoints / totalCredits : 0;
+
+            document.getElementById("grade_point_average").innerText = gpa.toFixed(2);
+            document.getElementById("total_hours").innerText = totalCredits;
+            document.getElementById("total_courses").innerText = totalCourses;
+            document.getElementById("quality_points").innerText = totalQualityPoints;
+
+        }
+
+
+        function resetCalculator() {
+
+            const form = document.getElementById("course-form");
+
+            // saare courses remove
+            form.innerHTML = "";
+
+            // id reset
+            id = 0;
+
+            // default courses dobara add
+            addCourse();
+            addCourse();
+
+            console.clear();
+
+        }
+
+
+        addCourse();
+        addCourse()
+    </script>
 </body>
+
 </html>
