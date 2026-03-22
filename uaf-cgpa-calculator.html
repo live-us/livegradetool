@@ -18,13 +18,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveGrade">
     <meta name="twitter:creator" content="@Usama">
-    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
-    <link rel="shortcut icon" href="/src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/src/favicon/site.webmanifest">
-
-
+    <link rel="shortcut icon" href="/src/favicon.ico">
+    <link rel="stylesheet" href="/src/style.css">
 
 
     <title>UAF CGPA Calculator 2026 - Accurate Semester & Cumulative GPA Tool</title>
@@ -44,349 +39,105 @@
         content="Calculate your semester GPA and cumulative CGPA according to UAF grading policy.">
     <meta property="og:type" content="website">
 
-    <!-- External CSS -->
-    <style>
-        /* ===== RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f5f7fa;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-
-        /* ===== LAYOUT ===== */
-        .container {
-            width: 95%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 0;
-        }
-
-        /* ===== HEADER ===== */
-        header {
-            background: #0d47a1;
-            color: #ffffff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            opacity: 0.9;
-        }
-
-        .updated {
-            margin-top: 8px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-            background: #08306b;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            list-style: none;
-        }
-
-        nav li {
-            margin: 5px 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 0;
-            display: block;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== SECTIONS ===== */
-        section {
-            margin: 40px 0;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #0d47a1;
-        }
-
-        h3 {
-            margin-bottom: 10px;
-            color: #08306b;
-        }
-
-        /* ===== CALCULATOR AREA ===== */
-        #calculator {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Semester Block */
-        .semester-block {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #f9fbff;
-            border: 1px solid #e3eaf5;
-            border-radius: 8px;
-        }
-
-        .semester-block h3 {
-            margin-bottom: 15px;
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
-
-        th {
-            background: #0d47a1;
-            color: white;
-            font-weight: 600;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        tbody tr:hover {
-            background: #f1f6ff;
-        }
-
-        /* ===== INPUTS ===== */
-        input[type="text"],
-        input[type="number"],
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        input:focus,
-        select:focus {
-            outline: none;
-            border-color: #0d47a1;
-        }
-
-        /* ===== BUTTONS ===== */
-        button {
-            cursor: pointer;
-            padding: 8px 14px;
-            border-radius: 6px;
-            border: none;
-            font-size: 14px;
-            transition: 0.2s ease;
-        }
-
-        .primary-btn {
-            background: #0d47a1;
-            color: white;
-            margin-top: 10px;
-        }
-
-        .primary-btn:hover {
-            background: #08306b;
-        }
-
-        .remove {
-            background: #d32f2f;
-            color: white;
-        }
-
-        .remove:hover {
-            background: #b71c1c;
-        }
-
-        /* ===== RESULT BOX ===== */
-        .result-box {
-            margin-top: 25px;
-            padding: 20px;
-            background: #e3f2fd;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .result-box h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        #final-cgpa {
-            font-size: 28px;
-            color: #0d47a1;
-            font-weight: bold;
-        }
-
-        /* ===== FAQ & Content Boxes ===== */
-        section article {
-            background: #ffffff;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #0d47a1;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
-        }
-
-        #subscribe {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        #subscribe input {
-            max-width: 300px;
-            margin-right: 10px;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #0d47a1;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 768px) {
-
-            header h1 {
-                font-size: 24px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav li {
-                margin: 5px 0;
-            }
-
-            table,
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-
-            thead {
-                display: none;
-            }
-
-            td {
-                text-align: left;
-                padding: 8px 0;
-            }
-
-            td::before {
-                content: attr(data-label);
-                font-weight: bold;
-                display: block;
-                margin-bottom: 4px;
-            }
-
-            .semester-block {
-                padding: 15px;
-            }
-
-            #subscribe input {
-                margin-bottom: 10px;
-                width: 100%;
-            }
-
-            #subscribe button {
-                width: 100%;
-            }
-
-            button {
-                width: 100%;
-                margin-top: 5px;
-            }
-        }
-    </style>
-
-
-
+    <!-- Google Analytec -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YSXB5G97K8');
-    </script>
+    </script> 
+
+    <!-- Google Adsens
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
+     crossorigin="anonymous"></script> 
+    -->
+
+    <!-- Monetag Scripts -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
+    
+
 </head>
 
 <body>
+    <header class="clm cent">
+        <div class="header cent">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35"> Live Grade</a>
+            <nav id="navLinks" class="effect cent" aria-label="Primary Navigation">
 
-    <header>
-        <div class="container">
-            <h1>UAF CGPA Calculator</h1>
-            <p>
-                Calculate your semester and cumulative CGPA based on the official grading system used at the University
-                of Agriculture Faisalabad.
-            </p>
-            <p class="updated">Last Updated: March 2026</p>
+                <button type="button" class="menu-btn" onclick="navBar(event)">
+                    <img src="/src/close-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+                </button>
+                <a href="/">Home</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+                <!-- <a href="#">Our Tools</a>
+                <a href="#">Our Articles</a> -->
+            </nav>
+            <button type="button" class="menu-btn" onclick="navBar(event)">
+                <img src="/src/open-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+            </button>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about-tool">About</a></li>
-                <li><a href="#calculator">Calculator</a></li>
-                <li><a href="#step-by-step">Guide</a></li>
-                <li><a href="#grading-system">Grading System</a></li>
-                <li><a href="#semester-vs-cumulative">GPA Info</a></li>
-                <li><a href="#uaf-policy">UAF Policy</a></li>
-                <li><a href="#faq-enhanced">FAQ</a></li>
-                <li><a href="#subscribe">Subscribe</a></li>
+
+    <main>
+        <header class="clm cent">
+            <div class="text clm cent">
+                <h1>UAF CGPA Calculator</h1>
+                <p>
+                    Calculate your semester and cumulative CGPA based on the official grading system used at the
+                    University
+                    of Agriculture Faisalabad.
+                </p>
+                <p class="updated">Last Updated: March 2026</p>
+            </div>
+        </header>
+
+
+        <div class="tool clm" style="align-self: center; justify-self: center; margin-top: -100px;">
+
+            <form id="course-form" action="#" onsubmit="return false;" class="clm"></form>
+
+            <div class="wrap btn-section" style="width: 100%; justify-content: flex-end;">
+                <button type="button" onclick="addCourse()" class="btn">Add Course</button>
+                <button type="button" onclick="calculateGPA()" class="btn">Calculate GPA</button>
+                <button type="reset" onclick="resetCalculator()" class="btn">Reset All</button>
+            </div>
+
+            <ul class="wrap" style="margin-top: 32px;">
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="grade_point_average">0.00</output>
+                    <strong>Grade Point Average</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="quality_points">0.00</output>
+                    <strong>Quality Points</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_hours">0.00</output>
+                    <strong>Credit Hours</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_courses">0.00</output>
+                    <strong>Total Courses</strong>
+                </li>
             </ul>
         </div>
-    </nav>
 
-    <main class="container">
 
-        <!-- About Tool / EEAT Section -->
-        <section id="about-tool">
+
+
+
+
+
+         <section class="clm cent">
             <h2>About This UAF CGPA Calculator</h2>
             <p>
                 This calculator is designed for students of the
@@ -404,25 +155,12 @@
             <p><strong>Last Updated:</strong> March 2026</p>
         </section>
 
-        <!-- Calculator Section -->
-        <section id="calculator">
-            <h2>Calculate Your CGPA</h2>
-
-            <div id="semester-wrapper"></div>
-
-            <button id="add-semester-btn" class="primary-btn">+ Add Semester</button>
-
-            <div class="result-box">
-                <h3>Cumulative CGPA: <span id="final-cgpa">0.00</span></h3>
-                <button id="copy-btn">Copy CGPA</button>
-                <button id="download-btn">Download Result</button>
-            </div>
-        </section>
+       
 
         <!-- Step-by-Step Guide Section -->
-        <section id="step-by-step">
+        <section class="clm cent">
             <h2>Step-by-Step Guide to Calculate Your CGPA</h2>
-            <ol>
+            <ol class="clm" style="padding-left: 28px;">
                 <li>Enter the subjects you have taken in each semester.</li>
                 <li>Enter credit hours for each subject.</li>
                 <li>Select the grade you received.</li>
@@ -435,7 +173,7 @@
         </section>
 
         <!-- Grading System Explanation Section -->
-        <section id="grading-system">
+        <section class="clm cent">
             <h2>UAF Grading System Explained</h2>
             <p>Grades at UAF are assigned based on your marks in each subject. Each grade corresponds to a grade point
                 as follows:</p>
@@ -493,7 +231,7 @@
         </section>
 
         <!-- Semester vs Cumulative GPA Section -->
-        <section id="semester-vs-cumulative">
+        <section class="clm cent">
             <h2>Semester GPA vs Cumulative GPA</h2>
             <p>
                 <strong>Semester GPA:</strong> The GPA calculated for a single semester based on courses taken in that
@@ -507,9 +245,9 @@
         </section>
 
         <!-- UAF Academic Policy Section -->
-        <section id="uaf-policy">
+        <section class="clm cent">
             <h2>UAF Academic CGPA Policies</h2>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Minimum CGPA to pass a semester: <strong>2.00</strong></li>
                 <li>Minimum cumulative CGPA to graduate: <strong>2.50</strong></li>
                 <li>Scholarship eligibility may require CGPA ≥ <strong>3.50</strong></li>
@@ -518,7 +256,7 @@
         </section>
 
         <!-- Enhanced FAQ Section -->
-        <section id="faq-enhanced">
+        <section class="clm cent">
             <h2>Frequently Asked Questions</h2>
 
             <article>
@@ -556,315 +294,172 @@
                 <p>Focus on higher credit courses and aim for better grades in each subject.</p>
             </article>
         </section>
-
-        <!-- Email Subscription Section -->
-        <section id="subscribe">
-            <h2>Get Academic Tool Updates</h2>
-            <p>Receive updates about new university calculators and student resources.</p>
-            <input type="email" placeholder="Enter your email">
-            <button class="primary-btn">Subscribe</button>
-        </section>
-
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2026 Academic Tools Pakistan</p>
-            <p>
-                This website is not affiliated with the University of Agriculture Faisalabad.
-            </p>
+    <footer class="clm cent">
+        <div class="clm">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35" loading="lazy"> Live Grade</a>
+            <p>Calculate uaf cgpa of semester or your overall semester with the help of our uaf cgpa calculator online tool.</p>
+            <div class="wrap cent" aria-label="Brand Information"
+                style="justify-content: space-between; margin-top: 20px;">
+                <div class="wrap cent social" aria-label="Social Media">
+                    <a href="mailto:usama.saeed.free@gmail.com" class="wrap cent"><img src="/src/email-contact.svg"
+                            alt="Email icon" width="25" height="25">Email</a>
+
+                    <a href="https://web.facebook.com/profile.php?id=100081021373803" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/facebook-profile.svg" alt="Facebook icon" width="25" height="25">Facebook</a>
+
+                    <a href="https://www.instagram.com/saeedusama313/" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/instagram-profile.svg" alt="Instagram icon" width="25" height="25">Instagram</a>
+
+                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/linkedin-profile.svg" alt="LinkedIn icon" width="25" height="25">LinkedIn</a>
+                </div>
+                <div class="wrap cent effect" aria-label="Footer Navigation">
+                    <a href="/">Home</a> |
+                    <a href="/about-us.html">About Us</a> |
+                    <a href="/contact-us.html">Contact Us</a> |
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+                    <a href="/disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
         </div>
+        <p class="copyright logo">&copy; <time datetime="2026">2026 </time> Live Grade. All rights reserved.</p>
     </footer>
 
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "How can I calculate my CGPA if I repeated a course?",
-   "acceptedAnswer": { "@type": "Answer", "text": "Only the latest attempt is counted in the CGPA calculation at UAF." }
- },
- {
-   "@type": "Question",
-   "name": "Can I include elective courses in my CGPA calculation?",
-   "acceptedAnswer": { "@type": "Answer", "text": "Yes, all courses with credit hours included in your transcript count toward your CGPA." }
- },
- {
-   "@type": "Question",
-   "name": "How does UAF round CGPA?",
-   "acceptedAnswer": { "@type": "Answer", "text": "CGPA is rounded to two decimal places." }
- },
- {
-   "@type": "Question",
-   "name": "Is this calculator officially affiliated with UAF?",
-   "acceptedAnswer": { "@type": "Answer", "text": "No. This is an educational tool developed independently to help students." }
- }]
-}
-</script>
+    <script>
+        const nav = document.getElementById("navLinks");
 
-    <!-- Software Application Schema -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "UAF CGPA Calculator",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web",
-  "description": "Online CGPA calculator for University of Agriculture Faisalabad students.",
-  "url": "https://livegrade.site/uaf-cgpa-calculator",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "PKR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "1200"
-  }
-}
-</script>
+        function navBar(event) {
+            event.stopPropagation(); // prevent document click
+            nav.classList.toggle("show");
+        }
 
-    <!-- External JS -->
+        // Close when clicking or touching outside nav
+        function closeOnOutside(event) {
+            if (nav.classList.contains("show") && !nav.contains(event.target)) {
+                nav.classList.remove("show");
+            }
+        }
+
+        // Close on scroll
+        function closeOnScroll() {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+            }
+        }
+
+        document.addEventListener("click", closeOnOutside);
+        document.addEventListener("touchstart", closeOnOutside);
+        window.addEventListener("scroll", closeOnScroll);
+
+    </script>
 
 
     <script>
-        // ===============================
-        // UAF CGPA Calculator Advanced Script
-        // ===============================
+        let id = 0;
+        function addCourse() {
+            id++;
+            const form = document.getElementById('course-form');
+            const newFieldset = document.createElement('fieldset');
+            newFieldset.className = 'wrap';
 
-        document.addEventListener("DOMContentLoaded", function () {
+            newFieldset.innerHTML = `<legend class="sr-only">Course ${id}</legend>
+            <div class="clm" style="gap: 8px;">
+                <label for="course_name_${id}">Course Name (Optional)</label>
+                <input type="text" id="course_name_${id}" placeholder="e.g. Physics">
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="grade_${id}">Grade</label>
+                <select id="grade_${id}" required>
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="4.00">A</option>
+                    <option value="3.67">A-</option>
+                    <option value="3.33">B+</option>
+                    <option value="3.00">B</option>
+                    <option value="2.33">C+</option>
+                    <option value="2.00">C</option>
+                    <option value="1.00">D</option>
+                    <option value="0.00">F</option>
+                </select>
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="credits_${id}">Credits</label>
+                <input type="number" id="credits_${id}"  min="0.5" step="0.5" required placeholder="3">
+            </div>
+            <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+            </button>`
+            form.appendChild(newFieldset);
+        }
 
-            // ===== DOM Elements =====
-            const semesterWrapper = document.getElementById("semester-wrapper");
-            const addSemesterBtn = document.getElementById("add-semester-btn");
-            const finalCgpaElement = document.getElementById("final-cgpa");
-            const copyBtn = document.getElementById("copy-btn");
-            const downloadBtn = document.getElementById("download-btn");
+        function removeCourse(button) {
+            button.closest(".wrap").remove();
+            id--;
+        }
 
-            // Advanced Features Elements
-            const percentageBtn = document.getElementById("percentage-btn");
-            const darkModeToggle = document.getElementById("dark-mode-toggle");
-            const chartCanvas = document.getElementById("cgpa-chart");
-            let cgpaChart;
 
-            // Grade Points Map
-            const gradePoints = {
-                "A": 4.00,
-                "A-": 3.67,
-                "B+": 3.33,
-                "B": 3.00,
-                "B-": 2.67,
-                "C+": 2.33,
-                "C": 2.00,
-                "D": 1.00,
-                "F": 0.00
-            };
+        function calculateGPA() {
 
-            let semesterCount = 0;
+            const courses = document.querySelectorAll("#course-form .wrap");
 
-            // ===============================
-            // Create Semester
-            // ===============================
-            function createSemester() {
-                semesterCount++;
-                const semesterDiv = document.createElement("div");
-                semesterDiv.classList.add("semester-block");
-                semesterDiv.innerHTML = `
-      <div class="semester-header">
-        <h3>Semester ${semesterCount}</h3>
-        <button class="remove-semester remove">Remove Semester</button>
-      </div>
+            let totalQualityPoints = 0;
+            let totalCredits = 0;
+            let totalCourses = 0;
 
-      <table>
-        <thead>
-          <tr>
-            <th>Subject</th>
-            <th>Credit Hours</th>
-            <th>Grade</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+            courses.forEach(course => {
 
-      <button class="add-subject primary-btn">+ Add Subject</button>
-      <div class="semester-result">Semester GPA: <span class="semester-gpa">0.00</span></div>
-    `;
-                semesterWrapper.appendChild(semesterDiv);
+                const grade = parseFloat(course.querySelector("select").value);
+                const credits = parseFloat(course.querySelector("input[type='number']").value);
 
-                const tbody = semesterDiv.querySelector("tbody");
-                const addSubjectBtn = semesterDiv.querySelector(".add-subject");
-                const removeSemesterBtn = semesterDiv.querySelector(".remove-semester");
+                if (!isNaN(grade) && !isNaN(credits)) {
 
-                addSubjectBtn.addEventListener("click", () => addSubjectRow(tbody));
-                removeSemesterBtn.addEventListener("click", () => {
-                    semesterDiv.remove();
-                    calculateFinalCGPA();
-                });
+                    const qualityPoints = grade * credits;
 
-                addSubjectRow(tbody); // Add default subject
-            }
+                    totalQualityPoints += qualityPoints;
+                    totalCredits += credits;
+                    totalCourses++;
 
-            // ===============================
-            // Add Subject Row
-            // ===============================
-            function addSubjectRow(tbody) {
-                const row = document.createElement("tr");
-                row.innerHTML = `
-      <td><input type="text" placeholder="Subject Name" title="Enter the subject name"></td>
-      <td><input type="number" min="0" step="0.5" class="credit" title="Enter credit hours"></td>
-      <td>
-        <select class="grade" title="Select grade">
-          <option value="">Select</option>
-          ${Object.keys(gradePoints).map(g => `<option value="${g}">${g}</option>`).join("")}
-        </select>
-      </td>
-      <td><button class="remove remove-subject">Remove</button></td>
-    `;
-                tbody.appendChild(row);
-
-                const creditInput = row.querySelector(".credit");
-                const gradeSelect = row.querySelector(".grade");
-                const removeBtn = row.querySelector(".remove-subject");
-
-                creditInput.addEventListener("input", calculateFinalCGPA);
-                gradeSelect.addEventListener("change", calculateFinalCGPA);
-                removeBtn.addEventListener("click", () => {
-                    row.remove();
-                    calculateFinalCGPA();
-                });
-            }
-
-            // ===============================
-            // Calculate CGPA and Semester GPA
-            // ===============================
-            function calculateFinalCGPA() {
-                let overallPoints = 0;
-                let overallCredits = 0;
-                const semesterGPAs = [];
-
-                document.querySelectorAll(".semester-block").forEach(semester => {
-                    let semesterPoints = 0;
-                    let semesterCredits = 0;
-
-                    semester.querySelectorAll("tbody tr").forEach(row => {
-                        const credit = parseFloat(row.querySelector(".credit").value);
-                        const grade = row.querySelector(".grade").value;
-                        if (!isNaN(credit) && gradePoints[grade] !== undefined) {
-                            semesterPoints += credit * gradePoints[grade];
-                            semesterCredits += credit;
-                        }
-                    });
-
-                    const semesterGpaElement = semester.querySelector(".semester-gpa");
-                    const semesterGPA = semesterCredits > 0 ? (semesterPoints / semesterCredits).toFixed(2) : "0.00";
-                    semesterGpaElement.textContent = semesterGPA;
-
-                    overallPoints += semesterPoints;
-                    overallCredits += semesterCredits;
-                    semesterGPAs.push(parseFloat(semesterGPA));
-                });
-
-                const finalCGPA = overallCredits > 0 ? (overallPoints / overallCredits).toFixed(2) : "0.00";
-                finalCgpaElement.textContent = finalCGPA;
-
-                // Update percentage conversion if visible
-                const percentageElement = document.getElementById("cgpa-percentage");
-                if (percentageElement) {
-                    percentageElement.textContent = (finalCGPA * 25).toFixed(2) + "%";
                 }
 
-                // Update chart
-                if (cgpaChart) {
-                    cgpaChart.data.datasets[0].data = semesterGPAs;
-                    cgpaChart.update();
-                }
-            }
-
-            // ===============================
-            // Copy CGPA
-            // ===============================
-            copyBtn.addEventListener("click", () => {
-                navigator.clipboard.writeText(finalCgpaElement.textContent).then(() => {
-                    alert("CGPA copied to clipboard.");
-                });
             });
 
-            // ===============================
-            // Download Result
-            // ===============================
-            downloadBtn.addEventListener("click", () => {
-                let content = "UAF CGPA Calculation Report\n---------------------------------\n\n";
-                let semesterIndex = 1;
+            const gpa = totalCredits ? totalQualityPoints / totalCredits : 0;
 
-                document.querySelectorAll(".semester-block").forEach(semester => {
-                    content += `Semester ${semesterIndex}\n`;
-                    semester.querySelectorAll("tbody tr").forEach(row => {
-                        const subject = row.querySelector("input[type='text']").value || "Subject";
-                        const credit = row.querySelector(".credit").value || "0";
-                        const grade = row.querySelector(".grade").value || "-";
-                        content += `  ${subject} | Credit: ${credit} | Grade: ${grade}\n`;
-                    });
-                    content += `  Semester GPA: ${semester.querySelector(".semester-gpa").textContent}\n\n`;
-                    semesterIndex++;
-                });
+            document.getElementById("grade_point_average").innerText = gpa.toFixed(2);
+            document.getElementById("total_hours").innerText = totalCredits;
+            document.getElementById("total_courses").innerText = totalCourses;
+            document.getElementById("quality_points").innerText = totalQualityPoints;
 
-                content += "---------------------------------\n";
-                content += `Final CGPA: ${finalCgpaElement.textContent}\n`;
-                if (document.getElementById("cgpa-percentage")) {
-                    content += `Percentage: ${document.getElementById("cgpa-percentage").textContent}\n`;
-                }
+        }
 
-                const blob = new Blob([content], { type: "text/plain" });
-                const link = document.createElement("a");
-                link.href = URL.createObjectURL(blob);
-                link.download = "uaf-cgpa-report.txt";
-                link.click();
-            });
 
-            // ===============================
-            // Dark Mode Toggle
-            // ===============================
-            if (darkModeToggle) {
-                darkModeToggle.addEventListener("click", () => {
-                    document.body.classList.toggle("dark-mode");
-                });
-            }
+        function resetCalculator() {
 
-            // ===============================
-            // Initialize Semester Chart
-            // ===============================
-            if (chartCanvas) {
-                cgpaChart = new Chart(chartCanvas, {
-                    type: "line",
-                    data: {
-                        labels: [],
-                        datasets: [{
-                            label: "Semester GPA",
-                            data: [],
-                            fill: false,
-                            borderColor: "#0d47a1",
-                            tension: 0.2,
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: { y: { min: 0, max: 4 } }
-                    }
-                });
-            }
+            const form = document.getElementById("course-form");
 
-            // ===============================
-            // Initialize
-            // ===============================
-            addSemesterBtn.addEventListener("click", createSemester);
-            createSemester(); // Add first semester automatically
+            // saare courses remove
+            form.innerHTML = "";
 
-        });
+            // id reset
+            id = 0;
+
+            // default courses dobara add
+            addCourse();
+            addCourse();
+
+            console.clear();
+
+        }
+
+
+        addCourse();
+        addCourse()
     </script>
 </body>
 
