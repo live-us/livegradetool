@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +18,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveGrade">
     <meta name="twitter:creator" content="@Usama">
-    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
     <link rel="shortcut icon" href="/src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/src/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/src/style.css">
 
 
     <title>UET GPA Calculator - LiveGrade</title>
@@ -62,229 +58,108 @@
 
 
 
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "UAF CGPA Calculator",
-  "applicationCategory": "EducationalApplication",
-  "operatingSystem": "Web",
-  "description": "Online CGPA calculator for University of Agriculture Faisalabad students.",
-  "url": "https://livegrade.site/uaf-cgpa-calculator.html",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "PKR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "1200"
-  }
-}
-</script>
-
-    <style>
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background: #f4f6f8;
-            color: #333;
-        }
-
-        header,
-        main,
-        footer {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        header h1 {
-            font-size: 2.2em;
-            margin-bottom: 5px;
-            color: #0056b3;
-        }
-
-        h2 {
-            color: #0056b3;
-            margin-top: 40px;
-            margin-bottom: 10px;
-        }
-
-        h3 {
-            color: #004494;
-        }
-
-        p,
-        li {
-            font-size: 1em;
-        }
-
-        /* Form & Inputs */
-        form div.course {
-            margin-bottom: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        input[type="text"],
-        input[type="number"] {
-            padding: 8px;
-            width: 150px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            padding: 8px 12px;
-            margin-top: 10px;
-            cursor: pointer;
-            background: #0056b3;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background: #004494;
-        }
-
-        /* Result Section */
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            background: #e7f0ff;
-            border-radius: 8px;
-        }
-
-        #semesterGPA,
-        #cgpa {
-            font-weight: bold;
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
-
-        /* Color-coded GPA */
-        .gpa-high {
-            color: #28a745;
-        }
-
-        /* GPA >= 3.5 */
-        .gpa-medium {
-            color: #ffc107;
-        }
-
-        /* GPA 2.5 - 3.49 */
-        .gpa-low {
-            color: #dc3545;
-        }
-
-        /* GPA < 2.5 */
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 8px;
-            text-align: center;
-        }
-
-        /* FAQ Details */
-        details {
-            margin-bottom: 10px;
-        }
-
-        /* Blockquotes (Testimonials) */
-        blockquote {
-            margin: 15px 0;
-            padding: 10px 15px;
-            background: #e7f0ff;
-            border-left: 5px solid #0056b3;
-            border-radius: 5px;
-            font-style: italic;
-        }
-
-        /* CTA Section */
-        #cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        #cta button {
-            font-size: 1.1em;
-            padding: 12px 20px;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-
-            input[type="text"],
-            input[type="number"] {
-                width: 100%;
-            }
-
-            form div.course {
-                flex-direction: column;
-            }
-        }
-    </style>
 
 
 
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
+    <!-- Google Analytec -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YSXB5G97K8');
-    </script>
+    </script> 
+
+    <!-- Google Adsens
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
+     crossorigin="anonymous"></script> 
+    -->
+
+    <!-- Monetag Scripts -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
+    
+
 </head>
 
 <body>
-    <header>
-        <h1>UET GPA Calculator - LiveGrade</h1>
-        <p>Instantly calculate your UET semester GPA and CGPA. Trusted by thousands of students across Pakistan.</p>
+    <header class="clm cent">
+        <div class="header cent">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35"> Live Grade</a>
+            <nav id="navLinks" class="effect cent" aria-label="Primary Navigation">
+
+                <button type="button" class="menu-btn" onclick="navBar(event)">
+                    <img src="/src/close-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+                </button>
+                <a href="/">Home</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+                <!-- <a href="#">Our Tools</a>
+                <a href="#">Our Articles</a> -->
+            </nav>
+            <button type="button" class="menu-btn" onclick="navBar(event)">
+                <img src="/src/open-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+            </button>
+        </div>
     </header>
 
+
     <main>
-        <!-- Interactive GPA Calculator -->
-        <section id="calculator">
-            <h2>Interactive GPA Calculator</h2>
-            <p>Enter your courses, credits, and marks to calculate your semester GPA and CGPA instantly.</p>
-            <form id="gpaForm">
-                <div id="coursesContainer"></div>
-                <button type="button" id="addCourse">Add Course</button>
-                <button type="button" id="calculateGPA">Calculate GPA</button>
-            </form>
-            <div id="result">
-                <h3>Results:</h3>
-                <p id="semesterGPA">Semester GPA: -</p>
-                <p id="cgpa">CGPA: -</p>
+        <header class="clm cent">
+            <div class="text clm cent">
+                <h1>UET GPA Calculator - LiveGrade</h1>
+                <p>Instantly calculate your UET semester GPA and CGPA. Trusted by thousands of students across Pakistan.
+                </p>
             </div>
-        </section>
+        </header>
+
+
+        <div class="tool clm" style="align-self: center; justify-self: center; margin-top: -100px;">
+
+            <form id="course-form" action="#" onsubmit="return false;" class="clm"></form>
+
+            <div class="wrap btn-section" style="width: 100%; justify-content: flex-end;">
+                <button type="button" onclick="addCourse()" class="btn">Add Course</button>
+                <button type="button" onclick="calculateGPA()" class="btn">Calculate GPA</button>
+                <button type="reset" onclick="resetCalculator()" class="btn">Reset All</button>
+            </div>
+
+            <ul class="wrap" style="margin-top: 32px;">
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="grade_point_average">0.00</output>
+                    <strong>Grade Point Average</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="quality_points">0.00</output>
+                    <strong>Quality Points</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_hours">0.00</output>
+                    <strong>Credit Hours</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_courses">0.00</output>
+                    <strong>Total Courses</strong>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
 
         <!-- Step-by-Step GPA Guide -->
-        <section id="gpaGuide">
+        <section class="clm cent">
             <h2>Step-by-Step Guide to Calculate GPA</h2>
-            <ol>
+            <ol class="clm" style="padding-left: 28px;">
                 <li>Enter each course name, credit hours, and marks obtained.</li>
                 <li>Press "Calculate GPA" to see your semester GPA.</li>
                 <li>For CGPA, include previous semesters in the same form.</li>
@@ -293,7 +168,7 @@
         </section>
 
         <!-- How GPA is Calculated -->
-        <section id="howToCalculate">
+        <section class="clm cent">
             <h2>How UET GPA is Calculated</h2>
             <p>The GPA is calculated using the formula:</p>
             <pre>GPA = Σ(Course Credit × Grade Point) / Σ(Course Credit)</pre>
@@ -354,9 +229,9 @@
         </section>
 
         <!-- GPA Tips Section -->
-        <section id="tips">
+        <section class="clm cent">
             <h2>Tips to Improve Your GPA</h2>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Prioritize high-credit courses to maximize GPA impact.</li>
                 <li>Consistent study habits outperform last-minute efforts.</li>
                 <li>Consult professors for guidance on difficult courses.</li>
@@ -366,9 +241,9 @@
         </section>
 
         <!-- Why Use LiveGrade Section -->
-        <section id="whyLiveGrade">
+        <section class="clm cent">
             <h2>Why Choose LiveGrade GPA Calculator?</h2>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Accurate calculation based on official UET grading rules.</li>
                 <li>Interactive and easy-to-use interface.</li>
                 <li>Free, accessible on any device.</li>
@@ -378,7 +253,7 @@
         </section>
 
         <!-- FAQ Section -->
-        <section id="faq">
+        <section class="clm cent">
             <h2>Frequently Asked Questions</h2>
             <details>
                 <summary>Can I calculate CGPA for multiple semesters?</summary>
@@ -403,7 +278,7 @@
         </section>
 
         <!-- Student Testimonials Section -->
-        <section id="testimonials">
+        <section class="clm cent">
             <h2>Student Testimonials</h2>
             <blockquote>
                 "LiveGrade helped me track my semester GPA and plan my courses efficiently. Highly recommended!" – Ali
@@ -418,7 +293,7 @@
         </section>
 
         <!-- About LiveGrade / EEAT Section -->
-        <section id="about">
+        <section class="clm cent">
             <h2>About LiveGrade</h2>
             <p>LiveGrade is a trusted educational platform providing interactive tools for students. Our calculators are
                 accurate, easy-to-use, and help thousands of students calculate GPA, CGPA, and grades efficiently.</p>
@@ -428,96 +303,188 @@
         </section>
 
         <!-- Resources Section -->
-        <section id="resources">
+        <section class="clm cent">
             <h2>Additional Resources</h2>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li><a href="https://www.uet.edu.pk/">Official UET Website</a></li>
-                <li><a href="https://www.uet.edu.pk/academic-calculator">UET Academic Calculator Guide</a></li>
-                <li><a href="#">LiveGrade Blog – Study Tips & GPA Insights</a></li>
+                <li>UET Academic Calculator Guide</li>
             </ul>
         </section>
 
         <!-- Call-to-Action / Engagement -->
-        <section id="cta">
+        <section class="clm cent">
             <h2>Start Calculating Your GPA Now!</h2>
             <p>Use the interactive tool above and see your GPA instantly. Share your results with friends or print them
                 for records.</p>
-            <button onclick="window.scrollTo({top:0, behavior:'smooth'})">Calculate Now</button>
+            
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 LiveGrade. All rights reserved. Trusted UET GPA Calculator.</p>
+    <footer class="clm cent">
+        <div class="clm">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35" loading="lazy"> Live Grade</a>
+            <p>UET GPA Calculate using the Live grade UET specialize grade scale gpa calculator tool its free and online.</p>
+            <div class="wrap cent" aria-label="Brand Information"
+                style="justify-content: space-between; margin-top: 20px;">
+                <div class="wrap cent social" aria-label="Social Media">
+                    <a href="mailto:usama.saeed.free@gmail.com" class="wrap cent"><img src="/src/email-contact.svg"
+                            alt="Email icon" width="25" height="25">Email</a>
+
+                    <a href="https://web.facebook.com/profile.php?id=100081021373803" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/facebook-profile.svg" alt="Facebook icon" width="25" height="25">Facebook</a>
+
+                    <a href="https://www.instagram.com/saeedusama313/" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/instagram-profile.svg" alt="Instagram icon" width="25" height="25">Instagram</a>
+
+                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/linkedin-profile.svg" alt="LinkedIn icon" width="25" height="25">LinkedIn</a>
+                </div>
+                <div class="wrap cent effect" aria-label="Footer Navigation">
+                    <a href="/">Home</a> |
+                    <a href="/about-us.html">About Us</a> |
+                    <a href="/contact-us.html">Contact Us</a> |
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+                    <a href="/disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright logo">&copy; <time datetime="2026">2026 </time> Live Grade. All rights reserved.</p>
     </footer>
 
     <script>
-        let courseCount = 0;
-        const coursesContainer = document.getElementById('coursesContainer');
-        const addCourseBtn = document.getElementById('addCourse');
-        const calculateBtn = document.getElementById('calculateGPA');
+        const nav = document.getElementById("navLinks");
 
-        // Add a new course input row
-        function addCourse() {
-            courseCount++;
-            const div = document.createElement('div');
-            div.className = 'course';
-            div.innerHTML = `
-    <input type="text" placeholder="Course Name" name="course${courseCount}">
-    <input type="number" placeholder="Credit Hours" name="credit${courseCount}" min="1">
-    <input type="number" placeholder="Marks Obtained" name="marks${courseCount}" min="0" max="100">
-  `;
-            coursesContainer.appendChild(div);
+        function navBar(event) {
+            event.stopPropagation(); // prevent document click
+            nav.classList.toggle("show");
         }
 
-        // Calculate GPA and CGPA
+        // Close when clicking or touching outside nav
+        function closeOnOutside(event) {
+            if (nav.classList.contains("show") && !nav.contains(event.target)) {
+                nav.classList.remove("show");
+            }
+        }
+
+        // Close on scroll
+        function closeOnScroll() {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+            }
+        }
+
+        document.addEventListener("click", closeOnOutside);
+        document.addEventListener("touchstart", closeOnOutside);
+        window.addEventListener("scroll", closeOnScroll);
+
+    </script>
+
+
+    <script>
+        let id = 0;
+        function addCourse() {
+            id++;
+            const form = document.getElementById('course-form');
+            const newFieldset = document.createElement('fieldset');
+            newFieldset.className = 'wrap';
+
+            newFieldset.innerHTML = `<legend class="sr-only">Course ${id}</legend>
+            <div class="clm" style="gap: 8px;">
+                <label for="course_name_${id}">Course Name (Optional)</label>
+                <input type="text" id="course_name_${id}" placeholder="e.g. Physics">
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="grade_${id}">Grade</label>
+                <select id="grade_${id}" required>
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="4.00">A+</option>
+                    <option value="3.75">A</option>
+                    <option value="3.50">B+</option>
+                    <option value="3.00">B</option>
+                    <option value="2.50">C+</option>
+                    <option value="2.00">C</option>
+                    <option value="1.00">D</option>
+                    <option value="0.00">F</option>
+                </select>
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="credits_${id}">Credits</label>
+                <input type="number" id="credits_${id}"  min="0.5" step="0.5" required placeholder="3">
+            </div>
+            <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+            </button>`
+            form.appendChild(newFieldset);
+        }
+
+        function removeCourse(button) {
+            button.closest(".wrap").remove();
+            id--;
+        }
+
+
         function calculateGPA() {
-            const courses = document.querySelectorAll('.course');
-            let totalPoints = 0;
+
+            const courses = document.querySelectorAll("#course-form .wrap");
+
+            let totalQualityPoints = 0;
             let totalCredits = 0;
+            let totalCourses = 0;
 
             courses.forEach(course => {
-                const creditInput = course.querySelector(`[name^="credit"]`);
-                const marksInput = course.querySelector(`[name^="marks"]`);
-                const credit = parseFloat(creditInput.value);
-                const marks = parseFloat(marksInput.value);
 
-                if (!credit || !marks) return;
 
-                let gradePoint = 0;
-                if (marks >= 85) gradePoint = 4.0;
-                else if (marks >= 80) gradePoint = 3.75;
-                else if (marks >= 75) gradePoint = 3.5;
-                else if (marks >= 70) gradePoint = 3.0;
-                else if (marks >= 65) gradePoint = 2.5;
-                else if (marks >= 60) gradePoint = 2.0;
-                else if (marks >= 50) gradePoint = 1.0;
-                else gradePoint = 0;
+                const grade = parseFloat(course.querySelector("select").value);
+                const credits = parseFloat(course.querySelector("input[type='number']").value);
 
-                totalPoints += credit * gradePoint;
-                totalCredits += credit;
+                if (!isNaN(grade) && !isNaN(credits)) {
+
+                    const qualityPoints = grade * credits;
+
+                    totalQualityPoints += qualityPoints;
+                    totalCredits += credits;
+                    totalCourses++;
+
+                }
+
             });
 
-            const gpa = totalCredits ? (totalPoints / totalCredits).toFixed(2) : 0;
-            const gpaEl = document.getElementById('semesterGPA');
-            const cgpaEl = document.getElementById('cgpa');
+            const gpa = totalCredits ? totalQualityPoints / totalCredits : 0;
 
-            gpaEl.innerText = `Semester GPA: ${gpa}`;
-            cgpaEl.innerText = `CGPA: ${gpa}`; // Extendable for multiple semesters
+            document.getElementById("grade_point_average").innerText = gpa.toFixed(2);
+            document.getElementById("total_hours").innerText = totalCredits;
+            document.getElementById("total_courses").innerText = totalCourses;
+            document.getElementById("quality_points").innerText = totalQualityPoints;
 
-            // Color-coded result
-            gpaEl.className = gpa >= 3.5 ? 'gpa-high' : gpa >= 2.5 ? 'gpa-medium' : 'gpa-low';
-            cgpaEl.className = gpaEl.className;
         }
 
-        // Initialize buttons
-        addCourseBtn.addEventListener('click', addCourse);
-        calculateBtn.addEventListener('click', calculateGPA);
 
-        // Initialize with 3 course rows
-        for (let i = 0; i < 3; i++) addCourse();
+        function resetCalculator() {
+
+            const form = document.getElementById("course-form");
+
+            // saare courses remove
+            form.innerHTML = "";
+
+            // id reset
+            id = 0;
+
+            // default courses dobara add
+            addCourse();
+            addCourse();
+
+            console.clear();
+
+        }
+
+
+        addCourse();
+        addCourse()
     </script>
 </body>
-
-
 </html>
-
