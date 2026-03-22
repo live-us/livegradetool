@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="google-adsense-account" content="ca-pub-5118554117280809">
     <meta name="revisit-after" content="7 days">
     <meta name="language" content="en">
     <meta name="rating" content="general">
@@ -17,12 +18,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveGrade">
     <meta name="twitter:creator" content="@Usama">
-    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
-    <link rel="shortcut icon" href="/src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/src/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/src/favicon.ico">
     <link rel="stylesheet" href="/src/style.css">
+
 
     <!-- Page Title -->
     <title>Get Answers to Common LSAC GPA Questions</title>
@@ -31,7 +29,6 @@
 
     <!-- Page Canonical URL -->
     <link rel="canonical" href="https://livegrade.site/lsac-gpa-faqs.html">
-    <meta property="og:url" content="https://livegrade.site/lsac-gpa-faqs.html">
 
 
     <!-- Page Description -->
@@ -49,71 +46,7 @@
         content="What is an LSAC GPA?, How do I figure out my LSAC GPA?">
 
 
-    <!-- Twitter Card Meta Tags
-    <meta property="og:image" content="https://livegrade.site/src/lsac-gpa-converter-tool.webp">
-    <meta name="twitter:image" content="https://livegrade.site/src/lsac-gpa-converter-tool.webp">  -->
-
-    <style>
-        #faqSearch {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        .accordion {
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-            border-bottom: 1px solid #eee;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-        }
-
-        .active,
-        .accordion:hover {
-            color: orangered;
-        }
-
-        .accordion:after {
-            content: '\002B';
-            color: orangered;
-            font-weight: bold;
-        }
-
-        .active:after {
-            content: "\2212";
-        }
-
-        /* The Panel (Answer) */
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .panel p {
-            padding: 15px 0;
-            color: #666;
-            line-height: 1.5;
-        }
-    </style>
-
-
-
-
-
+    <!-- Google Analytic  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -122,129 +55,143 @@
         gtag('config', 'G-YSXB5G97K8');
     </script>
 
+    <!-- Google Adsens
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
+     crossorigin="anonymous"></script> 
+    -->
+
+    <!-- Monetag Scripts -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
+    
+
 </head>
+
 <body>
-    <header>
-        <div class="header" role="banner">
-            <a href="/" class="logo"><img src="/src/header-logo.png" alt="Live Grade Logo" width="32" height="30">Live
-                Grade</a>
-            <!-- <nav id="navLinks" class="effect">
-                <img src="/src/close-menu-button.svg" alt="menu close icon" width="25" height="25" onclick="navBar()">
+    <header class="clm cent">
+        <div class="header cent">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35"> Live Grade</a>
+            <nav id="navLinks" class="effect cent" aria-label="Primary Navigation">
+
+                <button type="button" class="menu-btn" onclick="navBar(event)">
+                    <img src="/src/close-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+                </button>
                 <a href="/">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+                <!-- <a href="#">Our Tools</a>
+                <a href="#">Our Articles</a> -->
             </nav>
-            <img src="/src/open-menu-button.svg" alt="open menu icon" width="25" height="25" onclick="navBar()"> -->
+            <button type="button" class="menu-btn" onclick="navBar(event)">
+                <img src="/src/open-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+            </button>
         </div>
     </header>
 
+
     <main>
-        <section class="clm" style="width: min(800px, 100%); align-items: center;">
-
-            <h1 style="text-align: center;">Answers to Common LSAC GPA Questions | Law School Admissions</h1>
-            <p style="text-align: center;">Find reliable answers to LSAC GPA questions. Discover how LSAC calculates your GPA, why it might differ from your undergraduate GPA, and how law schools evaluate it during the admissions process.</p>
-
-                <a href="/index.html" class="clr">LSAC CAS GPA Calculator</a>
-
-            <input type="text" id="faqSearch" placeholder="Search for a question..." onkeyup="searchFaqs()">
-
-            <div class="faq-list clm" style="min-height: 40vh;">
-                <div class="faq-item">
-                    <h2 class="accordion">What is an LSAC GPA?</h2>
-                    <div class="panel">
-                        <p>The LSAC GPA is standardized and recalculated using the LSAC CAS 4.33 grading scale. It is calculated by converting all your undergraduate grades from every institution you attended into a uniform scale. Law schools use this GPA to compare applicants consistently, regardless of the grading systems used at different schools.</p>
-                    </div>
+        <article class="clm cent">
+            <header class="clm cent">
+                <div class="text clm cent">
+                    <h1>Answers to Common LSAC GPA Questions | Law School Admissions</h1>
+                    <p>Find reliable answers to LSAC GPA questions. Discover how LSAC calculates your GPA, why it might differ from your undergraduate GPA, and how law schools evaluate it during the admissions process.</p>
+                    <a href="/index.html" class="clr">LSAC CAS GPA Calculator</a>
                 </div>
+            </header>
 
-                <div class="faq-item">
-                    <h2 class="accordion">How do I figure out my LSAC GPA?</h2>
-                    <div class="panel">
-                        <p>You can figure out your LSAC GPA by reviewing your Credential Assembly Service (CAS) report after LSAC processes all required undergraduate transcripts. According to LSAC, transcript processing typically takes about 2 weeks but may extend to 4 &dash; 6 weeks during peak application periods. Your official LSAC GPA appears in the Academic Summary section of your CAS report once processing is complete.</p>
-                    </div>
-                </div>
+            <section class="clm">
+               
+                <details>
+                    <summary>
+                        <h3>What is an LSAC GPA?</h3>
+                    </summary>
+                    <p>The LSAC GPA is standardized and recalculated using the LSAC CAS 4.33 grading scale. It is calculated by converting all your undergraduate grades from every institution you attended into a uniform scale. Law schools use this GPA to compare applicants consistently, regardless of the grading systems used at different schools.</p>
+                </details>
 
-                <div class="faq-item">
-                    <h2 class="accordion">Does LSAC GPA round up?</h2>
-                    <div class="panel">
-                        <p>Yes, LSAC rounds GPAs to two decimal places using standard rounding rules.</p>
+                <details>
+                    <summary>
+                        <h3>How do I figure out my LSAC GPA?</h3>
+                    </summary>
+                    <p>You can figure out your LSAC GPA by reviewing your Credential Assembly Service (CAS) report after LSAC processes all required undergraduate transcripts. According to LSAC, transcript processing typically takes about 2 weeks but may extend to 4 &dash; 6 weeks during peak application periods. Your official LSAC GPA appears in the Academic Summary section of your CAS report once processing is complete.</p>
+                </details>
+
+
+                <details>
+                    <summary>
+                        <h3>Does LSAC GPA round up?</h3>
+                    </summary>
+                    <p>Yes, LSAC rounds GPAs to two decimal places using standard rounding rules.</p>
                         <p>It does not “inflate” GPAs—it only applies normal rounding at the thousandths place. So your LSAC GPA will always be reported with two decimals, rounded in the standard way.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </details>
 
+
+            </section>
+        </article>
     </main>
 
-
-    
-    <footer>
-        <div class="footer clm">
-            <a href="/" class="logo"><img src="/src/footer-logo.png" alt="live GPA Logo" title="Grades Calculator Tool"
-                    width="32" height="30">Live Grade</a>
+    <footer class="clm cent">
+        <div class="clm">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35" loading="lazy"> Live Grade</a>
             <p>Convert your grade and calculate your GPA instantly with the Live Grade online tool, which is reliable,
                 easy to use and accurate.</p>
+            <div class="wrap cent" aria-label="Brand Information"
+                style="justify-content: space-between; margin-top: 20px;">
+                <div class="wrap cent social" aria-label="Social Media">
+                    <a href="mailto:usama.saeed.free@gmail.com" class="wrap cent"><img src="/src/email-contact.svg"
+                            alt="Email icon" width="25" height="25">Email</a>
 
-            <!-- <div class="wrap" style="justify-content: space-between;">
-                <div class="site effect wrap">
-                    <a href="/">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
+                    <a href="https://web.facebook.com/profile.php?id=100081021373803" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/facebook-profile.svg" alt="Facebook icon" width="25" height="25">Facebook</a>
+
+                    <a href="https://www.instagram.com/saeedusama313/" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/instagram-profile.svg" alt="Instagram icon" width="25" height="25">Instagram</a>
+
+                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/linkedin-profile.svg" alt="LinkedIn icon" width="25" height="25">LinkedIn</a>
                 </div>
-                <div class="social effect wrap">
-                    <a href="#"><img src="/src/facebook-profile.svg" alt="facebook icon" width="25">vist facebook
-                        profile</a>
-                    <a href="#"><img src="/src/instagram-profile.svg" alt="instagrame icon" width="25">vist instagrame
-                        profile</a>
-                    <a href="#"><img src="/src/linkedin-profile.svg" alt="linkedin icon" width="25">vist my linkind
-                        profile</a>
+                <div class="wrap cent effect" aria-label="Footer Navigation">
+                    <a href="/">Home</a> |
+                    <a href="/about-us.html">About Us</a> |
+                    <a href="/contact-us.html">Contact Us</a> |
+                    <a href="/privacy-policy.html">Privacy Policy</a> |
+                    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+                    <a href="/disclaimer.html">Disclaimer</a>
                 </div>
-            </div> -->
+            </div>
         </div>
-        <hr>
-        <small>&copy; 2025 Live Grade. All Rights Reserved.</small>
+        <p class="copyright logo">&copy; <time datetime="2026">2026 </time> Live Grade. All rights reserved.</p>
     </footer>
 
     <script>
-        function navBar() {
-            let nav_Bar = document.getElementById("navLinks");
-            nav_Bar.classList.toggle("show");
+        const nav = document.getElementById("navLinks");
+
+        function navBar(event) {
+            event.stopPropagation(); // prevent document click
+            nav.classList.toggle("show");
         }
 
-        const acc = document.getElementsByClassName("accordion");
-
-        for (let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-
-        // 2. Logic for Searching
-        function searchFaqs() {
-            const input = document.getElementById('faqSearch');
-            const filter = input.value.toLowerCase();
-            const faqItems = document.getElementsByClassName('faq-item');
-
-            for (let i = 0; i < faqItems.length; i++) {
-                const question = faqItems[i].getElementsByClassName('accordion')[0];
-                const txtValue = question.textContent || question.innerText;
-
-                if (txtValue.toLowerCase().indexOf(filter) > -1) {
-                    faqItems[i].style.display = "";
-                } else {
-                    faqItems[i].style.display = "none";
-                }
+        // Close when clicking or touching outside nav
+        function closeOnOutside(event) {
+            if (nav.classList.contains("show") && !nav.contains(event.target)) {
+                nav.classList.remove("show");
             }
         }
 
+        // Close on scroll
+        function closeOnScroll() {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+            }
+        }
+
+        document.addEventListener("click", closeOnOutside);
+        document.addEventListener("touchstart", closeOnOutside);
+        window.addEventListener("scroll", closeOnScroll);
+
     </script>
 </body>
-
 </html>
