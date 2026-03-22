@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,23 +18,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveGrade">
     <meta name="twitter:creator" content="@Usama">
-    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg">
-    <link rel="shortcut icon" href="/src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/src/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/src/favicon.ico">
     <link rel="stylesheet" href="/src/style.css">
-    <link rel="manifest" href="/manifest/lsac.json">
+    
 
-    <!-- Page Title -->
+     <!-- Page Title -->
     <title>LSAC GPA Calculator - CAS 4.33 Grade Tool [2026]</title>
     <meta property="og:title" content="LSAC GPA Calculator - [2026]">
     <meta name="twitter:title" content="LSAC GPA Calculator - [2026]">
 
     <!-- Page Canonical URL -->
     <link rel="canonical" href="https://livegrade.site/">
-    <meta property="og:url" content="https://livegrade.site/">
-
 
     <!-- Page Description -->
     <meta name="description"
@@ -52,282 +45,9 @@
         content="LSAC GPA calculator, online LSAC CAS GPA converter, LSAC GPA conversion, calculate LSAC GPA, law school admission council, LSAC CAS GPA, how does LSAC calculate GPA, how to calculate LSAC GPA, law school GPA estimate, convert grades for law school, LSAT GPA calculator, law school admission predictor, estimate law school score, cas gpa vs gpa">
 
 
-    <!-- Twitter Card Meta Tags -->
-    <meta property="og:image" content="https://livegrade.site/src/lsac-gpa-converter-tool.webp">
-    <meta name="twitter:image" content="https://livegrade.site/src/lsac-gpa-converter-tool.webp">
-
-    <meta property="og:image" content="https://livegrade.site/src/lsac-cas-gpa-calculator.webp">
-    <meta name="twitter:image" content="https://livegrade.site/src/lsac-cas-gpa-calculator.webp">
-    
-
-    <style>
-        /* --- ORIGINAL STYLING PRESERVED --- */
-        .tool {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 24px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 8px gainsboro;
-
-        }
-
-        .input-section {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .input-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 24px 16px;
-            border-bottom: 1px solid #ddd;
-            align-items: flex-end;
-            animation: fadeIn 0.3s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .input-row>img {
-            background-color: red;
-            width: 37px;
-            padding: 6px;
-            border-radius: 4px;
-            transition: 0.3s ease-in-out;
-            cursor: pointer;
-            /* Added for UX */
-        }
-
-        .input {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        label {
-            font-size: 12px;
-            margin-bottom: 4px;
-        }
-
-        .btn-section {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 20px 0px;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .btn-section>button {
-            padding: 8px 20px;
-            border-radius: 20px;
-            background-color: transparent;
-            font-weight: 500;
-            cursor: pointer;
-            transition: 0.3s ease-in;
-        }
-
-        .btn-section>button:hover,
-        .input-row>img:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .result-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .result-section>* {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #dddddd40;
-            flex-grow: 1;
-            gap: 4px;
-            text-align: center;
-        }
-
-        .result-section>*>h2 {
-            color: #2e2d2d;
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .result-section>*>small {
-            color: rgb(107, 107, 107);
-        }
-
-        .history {
-            margin-top: 24px;
-            padding: 4px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .history>b {
-            color: #2e2d2d;
-        }
-
-        .table-row {
-            display: flex;
-            align-items: center;
-            margin: 0;
-        }
-
-        .table-row>* {
-            display: flex;
-            flex-grow: 1;
-            padding: 8px;
-            border-bottom: 1px solid #ddd;
-            flex-basis: 0;
-
-            justify-content: center;
-        }
-
-        .header-row {
-            font-weight: bold;
-            background-color: #f9f9f9;
-        }
-
-        /* Utility to hide elements if needed */
-        .hidden {
-            display: none;
-        }
 
 
 
-
-
-
-        /* Layout Wrapper */
-    .product-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-        background-color: #f9f9f9; /* Light contrast to make cards pop */
-        border-radius: 15px;
-    }
-
-    /* Base Card Style */
-    .product-card {
-        flex: 1;
-        min-width: 300px;
-        max-width: 450px;
-        border: 1px solid #e0e0e0;
-        border-radius: 12px;
-        padding: 20px;
-        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        background: #fff;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .product-card:hover {
-        transform: translateY(-5px); /* Subtle hover effect for higher clicks */
-    }
-
-    .product-image {
-        flex: 1;
-        max-width: 100px;
-    }
-
-    .product-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .product-info {
-        flex: 2;
-    }
-
-    .badge {
-        background: #fdf2f2;
-        color: #d32f2f;
-        padding: 4px 10px;
-        font-size: 11px;
-        font-weight: bold;
-        border-radius: 50px;
-        text-transform: uppercase;
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-
-    .badge-practice {
-        background: #e8f5e9;
-        color: #2e7d32;
-    }
-
-    .product-title {
-        font-size: 17px;
-        font-weight: 700;
-        margin: 0 0 8px 0;
-        color: #222;
-        line-height: 1.2;
-    }
-
-    .product-desc {
-        font-size: 13px;
-        color: #555;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
-
-    .cta-button {
-        display: block;
-        background: #FF9900;
-        color: #000 !important;
-        text-align: center;
-        padding: 12px;
-        border-radius: 6px;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .cta-button:hover {
-        background: #e68a00;
-        text-decoration: none;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 600px) {
-        .product-card {
-            flex-direction: column;
-            text-align: center;
-            max-width: 100%;
-        }
-        .product-image {
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-    }
-    </style>
-
-    
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
@@ -549,6 +269,7 @@
     </script>
 
 
+    <!-- Google Analytec  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -557,131 +278,88 @@
         gtag('config', 'G-YSXB5G97K8');
     </script>
 
+    <!-- Google Adsens
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
+     crossorigin="anonymous"></script> 
+    -->
 
-    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    <!-- Monetag Scripts   -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
+   
 
-    
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <a href="/" class="logo"><img src="/src/header-logo.png"
-                    alt="LiveGrade - Professional GPA Calculation Tools" loading="lazy" width="32" height="30">Live
-                Grade</a>
-            <nav id="navLinks" class="effect">
-                <img src="/src/close-menu-button.svg" alt="menu close icon" width="25" height="25" onclick="navBar()"
-                    aria-hidden="true">
+    <header class="clm cent">
+        <div class="header cent">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35"> Live Grade</a>
+            <nav id="navLinks" class="effect cent" aria-label="Primary Navigation">
+
+                <button type="button" class="menu-btn" onclick="navBar(event)">
+                    <img src="/src/close-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+                </button>
                 <a href="/">Home</a>
-                <!-- <a href="/">About</a>  -->
-                <a href="https://liveuafgpa.netlify.app/">Other UAF GPA Tool</a>
-                <a href="#how-to-use">How to Use</a>
-                <a href="#how-it-works">How It Works</a>
+                <a href="/about-us.html">About Us</a>
+                <a href="/contact-us.html">Contact Us</a>
+                <!-- <a href="#">Our Tools</a>
+                <a href="#">Our Articles</a> -->
             </nav>
-            <img src="/src/open-menu-button.svg" alt="open menu icon" width="25" height="25" onclick="navBar()"
-                style="cursor: pointer;">
+            <button type="button" class="menu-btn" onclick="navBar(event)">
+                <img src="/src/open-menu-button.svg" alt="close navigation menu - icon" width="20" height="20">
+            </button>
         </div>
     </header>
 
 
     <main>
-        <section class="clm">
-            <img src="/src/lsac-gpa-calculator.webp" alt="law school gpa estimator" loading="lazy" width="90"
-                height="97" style="align-self: center; width: 100px;">
+        <header class="clm cent">
+            <div class="text clm cent">
+                <h1>LSAC GPA Calculator with 4.33 grading scale</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, consectetur consequatur harum
+                    adipisci porro voluptas ullam nulla facilis! Totam, voluptates.</p>
+            </div>
+        </header>
 
-            <!-- <h1 style="text-align: center;">Calculate Your LSAC CAS GPA Using the Official 4.33 Scale</h1> -->
-             <h1 style="text-align: center;">LSAC GPA Calculator Build On CAS 4.33 Grade Scale</h1>
-            <p style="text-align: center;">Add all your undergraduate course grades and credit hours and calculate your LSAC CAS GPA. </p>
-            
-            <!--<p style="text-align: center;">This LSAC CAS GPA calculator uses the official 4.33 grade scale applied in U.S. law school admissions. It
-                allows you to convert your full undergraduate transcript in seconds and see a clear, reliable estimate
-                of your CAS GPA. <a href="https://omg10.com/4/10627863" class='clr'>Simply enter your courses and grades to begin.</a></p>
 
-            
-             <h1 style="text-align: center;">LSAC GPA Calculator</h1>
-            <p style="text-align: center;">Calculate your CAS GPA using the precise methodology required for U.S. and Canadian law school admissions. Unlike a standard university GPA, our tool accounts for A+ Weighting (4.33), Quality Points, and the difference between Semester vs. Quarter Hours. Get a reliable estimate of your Transcript Summarization before you submit your final file to the Law School Admission Council.</p>  -->
+        <div class="tool clm" style="align-self: center; justify-self: center; margin-top: -100px;">
 
-            
-            
+            <form id="course-form" action="#" onsubmit="return false;" class="clm"></form>
 
-            
-
-            <div class="tool" id="lsac-gpa-calculator">
-                <form id="gpa-form" onsubmit="event.preventDefault();">
-                    <div class="input-section" id="rows-container">
-
-                    </div>
-                </form>
-
-                <div class="btn-section">
-                    <button type="button" id="reset-rows" aria-label="Reset GPA Calculator"
-                        style="color:red;border:1px solid red;">Reset</button>
-                    <button type="button" id="add-course" aria-label="Add course to LSAC GPA calculation"
-                        style="color:#0067ce;border:1px solid #0067ce;">Add Course</button>
-                </div>
-
-                <div class="result-section">
-
-                    <div aria-live="polite">
-                        <h2 id="display-gpa">0.00</h2>
-                        <small>Your LSAC GPA</small>
-                    </div>
-
-                    <div>
-                        <h2 id="display-credits">0.0</h2>
-                        <small>Total Credit Hours</small>
-                    </div>
-
-                    <div>
-                        <h2 id="display-points">0.0</h2>
-                        <small>Total Quality Points</small>
-                    </div>
-
-                    <div>
-                        <h2 id="display-courses">0</h2>
-                        <small>Total Courses</small>
-                    </div>
-
-                </div>
-
-                <div class="history">
-
-                    <strong>History</strong>
-
-                    <div class="table-row header-row">
-                        <span>GPA</span>
-                        <span>Credits</span>
-                        <span>Courses</span>
-                        <span>Date</span>
-                    </div>
-
-                    <div id="history-container">
-                        <p style="text-align: center; color: #999; padding: 10px; margin: 0;">No GPA calculations have
-                            been saved yet.</p>
-                    </div>
-
-                </div>
-
-                <div class="btn-section">
-                    <button type="button" id="save-data" aria-label="Save GPA calculation"
-                        style="background-color:#272727;color:#ffffff;border:1px solid #272727;">Save</button>
-                    <button type="button" id="download-csv" aria-label="Download GPA results"
-                        style="background-color:transparent;color:#272727;border:1px solid #272727;">Download
-                        History</button>
-                    <button type="button" id="clear-history" aria-label="Clear GPA history"
-                        style="background-color:red;color:#ffffff;border:1px solid red;">Clear History</button>
-                </div>
-
+            <div class="wrap btn-section" style="width: 100%; justify-content: flex-end;">
+                <button type="button" onclick="addCourse()" class="btn">Add Course</button>
+                <button type="button" onclick="calculateGPA()" class="btn">Calculate GPA</button>
+                <button type="reset" onclick="resetCalculator()" class="btn">Reset All</button>
             </div>
 
-        </section>
+            <ul class="wrap" style="margin-top: 32px;">
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="grade_point_average">0.00</output>
+                    <strong>Grade Point Average</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="quality_points">0.00</output>
+                    <strong>Quality Points</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_hours">0.00</output>
+                    <strong>Credit Hours</strong>
+                </li>
+                <li class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
+                    <output id="total_courses">0.00</output>
+                    <strong>Total Courses</strong>
+                </li>
+            </ul>
+        </div>
 
 
 
-               
-
-        <section class="clm">
-            <div class="clm special" style="border-left: 4px solid orangered;">
+        <section class="clm cent">
+            <div class="clm" style="padding: 20px; border-left: 4px solid orangered; background-color: var(--gray);">
                 <strong>Educational estimate disclaimer:</strong>
                 <p>This tool is intended for educational and planning purposes and follows the publicly documented LSAC
                     GPA calculation methodology. Final and official CAS GPA values are calculated and verified
@@ -720,8 +398,9 @@
                 GPA calculation.</p>
 
         </section>
-        <hr>
-        <section class="clm" id="how-to-use">
+   
+
+        <section class="clm cent" id="how-to-use">
             <h2>How to use this LSAC GPA calculator?</h2>
             <p>This calculator is designed to follow the official LSAC GPA calculation process. It is intended to help
                 applicants accurately estimate their LSAC CAS GPA when preparing law school applications or reviewing
@@ -752,7 +431,7 @@
             <h3 style="margin-top: 28px;">Optional Steps:</h3>
             <p>These steps are useful when you are calculating a full transcript. Here are the steps to add or remove
                 any course.</p>
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Click “Add Course” to include another subject</li>
                 <li>Click “Remove Course” to delete an existing entry</li>
             </ul>
@@ -760,8 +439,9 @@
             <p>Repeat the same steps for each course as shown above.</p>
 
         </section>
-        <hr>
-        <section class="clm">
+ 
+
+        <section class="clm cent">
             <h2>How Does LSAC Calculate GPA?</h2>
             <p>The Law School Admission Council (LSAC) does not use your university GPA exactly as it appears on your
                 transcript. Instead, LSAC recalculates your undergraduate GPA through the Credential Assembly Service
@@ -788,7 +468,7 @@
                 and dividing the total by the number of credit hours, which is reported to law schools. This
                 standardized GPA is used for:</p>
 
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Admissions decisions</li>
                 <li>Scholarship evaluations</li>
                 <li>Comparing applicants from different universities and grading systems</li>
@@ -803,13 +483,13 @@
                 Admission Council (LSAC), which is why the results are highly accurate.</p>
         </section>
 
-        <hr>
-        <section class="clm">
+
+        <section class="clm cent">
             <h2>Features of the CAS GPA Calculator</h2>
             <p>This LSAC GPA Calculator is designed to be accurate, transparent, and easy to use, helping students
                 clearly understand their law school GPA. </p>
 
-            <ul>
+            <ul class="clm" style="padding-left: 28px;">
                 <li>Uses the official LSAC 4.33 GPA grading scale applied in Credential Assembly Service (CAS)
                     evaluations.</li>
                 <li>Easily add or remove courses to match your full transcript. This flexibility helps you include all
@@ -830,8 +510,8 @@
                 grading systems that can cause confusion.</p>
         </section>
 
-        <hr>
-        <section class="clm">
+ 
+        <section class="clm cent">
             <h2>Use this GPA estimator for:</h2>
             <p>This LSAC GPA estimator helps students at various stages of their law school journey. It completely
                 aligns with how law schools and LSAC evaluate academic records. This makes it useful for planning,
@@ -870,8 +550,9 @@
                 combined into a single LSAC GPA. Confirm inputs and match official LSAC methodology.</p>
         </section>
 
-        <hr>
-        <section class="clm" id="lsac-gpa-scale" aria-labelledby="lsac-gpa-scale-heading">
+
+
+        <section class="clm cent" id="lsac-gpa-scale" aria-labelledby="lsac-gpa-scale-heading">
 
             <h2 id="lsac-gpa-scale-heading">LSAC GPA Scale (Official CAS Grade Conversion)</h2>
 
@@ -1026,8 +707,8 @@
         </section>
 
 
-        <hr>
-        <section class="clm">
+
+        <section class="clm cent">
             <h2>LSAC GPA vs. University GPA</h2>
             <p>Your university GPA is calculated by your institution using its own grading scale and academic policies,
                 which can vary widely between colleges and countries.</p>
@@ -1038,8 +719,8 @@
                 applications.</p>
         </section>
 
-        <hr>
-        <section class="clm">
+
+        <section class="clm cent">
             <h2>FAQs</h2>
 
             <details>
@@ -1048,7 +729,7 @@
                 </summary>
                 <p>A good LSAC GPA depends on the selectivity of the law schools you are targeting. Based on historical
                     admissions data and admissions committee guidance:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li><strong>3.7+ LSAC GPA: </strong>Highly competitive for top-tier (T14) U.S. law schools</li>
                     <li><strong>3.4 &mdash; 3.69: </strong>Strong for many Tier-1 and Tier-2 schools</li>
                     <li><strong>3.0 &mdash; 3.39: </strong>Acceptable for regional and mid-tier programs</li>
@@ -1065,7 +746,7 @@
                 </summary>
                 <p>This is one of the most common applicant concerns. In practice, LSAC GPA is often lower because LSAC:
                 </p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Counts all attempted courses, including failures and repeats</li>
                     <li>Does not apply grade forgiveness or replacement policies</li>
                     <li>Includes withdrawals that carry credit</li>
@@ -1081,7 +762,7 @@
                     <h3>How does LSAC calculate A+?</h3>
                 </summary>
                 <p>LSAC assigns 4.33 grade points to an A+, which exceeds the standard 4.0 scale:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li><strong>A+ = </strong>4.33</li>
                     <li><strong>A = </strong>4.00</li>
                     <li><strong>A- = </strong>3.67</li>
@@ -1096,7 +777,7 @@
                     <h3>Is a 3.7 GPA good for law school in Canada?</h3>
                 </summary>
                 <p>Yes. A 3.7 GPA is considered very strong for Canadian law schools, including:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>University of Toronto</li>
                     <li>McGill University</li>
                     <li>University of British Columbia</li>
@@ -1121,7 +802,7 @@
                     <h3>Can your LSAC GPA be higher than your GPA?</h3>
                 </summary>
                 <p>Yes, though it is less common. LSAC GPA can be higher if:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Your transcript includes A+ grades (4.33)</li>
                     <li>Your institution capped GPA calculations at 4.0</li>
                     <li>Your grading system converts favorably under LSAC rules</li>
@@ -1136,7 +817,7 @@
                     <h3>How to view, see, or find your LSAC GPA</h3>
                 </summary>
                 <p>To view your LSAC GPA:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Log in to your LSAC account</li>
                     <li>Open Credential Assembly Service (CAS)</li>
                     <li>Access your Academic Summary Report</li>
@@ -1175,7 +856,7 @@
                 <summary>
                     <h3>LSAC GPA vs regular GPA / undergraduate GPA</h3>
                 </summary>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li><strong>Undergraduate GPA: </strong>Calculated by your university</li>
                     <li><strong>LSAC GPA: </strong>Recalculated by LSAC using CAS rules</li>
                 </ul>
@@ -1187,7 +868,7 @@
                     <h3>Best CAS LSAC GPA calculator</h3>
                 </summary>
                 <p>The best LSAC GPA calculator is one that:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Uses official LSAC grade conversion rules</li>
                     <li>Includes A+ = 4.33 logic</li>
                     <li>Counts all attempted undergraduate credits</li>
@@ -1201,7 +882,7 @@
                     <h3>How do I calculate my LSAC GPA / CAS GPA?</h3>
                 </summary>
                 <p>To calculate your LSAC GPA:</p>
-                <ul>
+                <ul class="clm" style="padding-left: 28px;">
                     <li>Convert each grade to LSAC grade points</li>
                     <li>Multiply grade points by credit hours</li>
                     <li>Add all grade points together</li>
@@ -1341,7 +1022,7 @@
         </section>
 
         <hr>
-        <section class="clm special">
+        <section class="clm cent" style="padding: 20px; background-color: var(--gray);">
             <h2>About the Developer:</h2>
             <p>Hi, I'm Usama, a web developer with over five years of experience building reliable, student-focused
                 academic tools. I specialize in developing calculators and conversion tools that simplify complex
@@ -1367,304 +1048,175 @@
             <span>January 2026</span>
         </section>
 
-
-
-        <section class="product-wrapper">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/51LT-OMX1YL._SY385_.jpg" alt="The LSAT Trainer">
-                </div>
-                <div class="product-info">
-                    <span class="badge">Top Rated Prep Tool</span>
-                    <h3 class="product-title">The LSAT Trainer</h3>
-                    <p class="product-desc">Master the LSAT with Mike Kim’s self-study guide. Perfect for students
-                        aiming for a T14 score.</p>
-                    <a href="https://amzn.to/3OaiXSv" target="_blank" rel="sponsored nofollow" class="cta-button">Check
-                        Price on Amazon</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://m.media-amazon.com/images/I/81EHHUWDaZL._SY342_.jpg"
-                        alt="10 Actual Official LSAT PrepTests">
-                </div>
-                <div class="product-info">
-                    <span class="badge badge-practice">Essential Practice</span>
-                    <h3 class="product-title">10 Actual, Official LSAT PrepTests</h3>
-                    <p class="product-desc">The most effective way to prepare is with real exams. Includes 10 previously
-                        administered LSATs.</p>
-                    <a href="https://amzn.to/403iXGt" target="_blank" rel="sponsored nofollow" class="cta-button">Check
-                        Price on Amazon</a>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-
-    <footer>
-        <div class="footer clm">
-            <a href="/" class="logo">
-                <img src="/src/footer-logo.png" alt="Live Grade - Official LSAC GPA Calculator Logo"
-                    title="Grades Calculator Tool" width="32" height="30"> Live Grade</a>
+    <footer class="clm cent">
+        <div class="clm">
+            <a href="/" class="wrap cent logo"><img src="/src/logo.png" alt="Live Grade GPA tools" width="37"
+                    height="35" loading="lazy"> Live Grade</a>
             <p>Convert your grades and calculate your LSAC GPA instantly with Live Grade. Our online tool provides
                 reliable, easy-to-use, and accurate CAS GPA estimations for law school applicants.</p>
+            <div class="wrap cent" aria-label="Brand Information"
+                style="justify-content: space-between; margin-top: 20px;">
+                <div class="wrap cent social" aria-label="Social Media">
+                    <a href="mailto:usama.saeed.free@gmail.com" class="wrap cent"><img src="/src/email-contact.svg"
+                            alt="Email icon" width="25" height="25">Email</a>
 
-            <a href="mailto:usama.saeed.free@gmail.com" class="email">Email: usama.saeed.free@gmail.com</a>
-            <div class="wraper">
-                <div class="wraper site effect">
+                    <a href="https://web.facebook.com/profile.php?id=100081021373803" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/facebook-profile.svg" alt="Facebook icon" width="25" height="25">Facebook</a>
+
+                    <a href="https://www.instagram.com/saeedusama313/" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/instagram-profile.svg" alt="Instagram icon" width="25" height="25">Instagram</a>
+
+                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" class="wrap cent" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/src/linkedin-profile.svg" alt="LinkedIn icon" width="25" height="25">LinkedIn</a>
+                </div>
+                <div class="wrap cent effect" aria-label="Footer Navigation">
                     <a href="/">Home</a> |
                     <a href="/about-us.html">About Us</a> |
                     <a href="/contact-us.html">Contact Us</a> |
                     <a href="/privacy-policy.html">Privacy Policy</a> |
-                    <a href="/terms-and-conditions.html">Terms and Conditions</a> |
+                    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
                     <a href="/disclaimer.html">Disclaimer</a>
-                </div>
-                <div class="wraper social-media effect">
-                    <a href="https://web.facebook.com/profile.php?id=100081021373803" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="/src/facebook-profile.svg" alt="Facebook" width="25" height="25"> Visit Facebook
-                    </a>
-
-                    <a href="https://www.instagram.com/saeedusama313/" target="_blank" rel="noopener noreferrer">
-                        <img src="/src/instagram-profile.svg" alt="Instagram" width="25" height="25"> Visit Instagram
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/usama-saeed-4b814123a" target="_blank"
-                        rel="noopener noreferrer">
-                        <img src="/src/linkedin-profile.svg" alt="LinkedIn" width="25" height="25"> Visit LinkedIn
-                    </a>
                 </div>
             </div>
         </div>
-        <hr>
-        <small>&copy; 2026 Live Grade. All Rights Reserved.</small>
+        <p class="copyright logo">&copy; <time datetime="2026">2026 </time> Live Grade. All rights reserved.</p>
     </footer>
+
     <script>
-        // Navigation Bar
-        function navBar() {
-            const navLinks = document.getElementById("navLinks");
-            if (navLinks) navLinks.classList.toggle("show");
+        const nav = document.getElementById("navLinks");
+
+        function navBar(event) {
+            event.stopPropagation(); // prevent document click
+            nav.classList.toggle("show");
+        }
+
+        // Close when clicking or touching outside nav
+        function closeOnOutside(event) {
+            if (nav.classList.contains("show") && !nav.contains(event.target)) {
+                nav.classList.remove("show");
+            }
+        }
+
+        // Close on scroll
+        function closeOnScroll() {
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show");
+            }
+        }
+
+        document.addEventListener("click", closeOnOutside);
+        document.addEventListener("touchstart", closeOnOutside);
+        window.addEventListener("scroll", closeOnScroll);
+
+    </script>
+
+
+    <script>
+        let id = 0;
+        function addCourse() {
+            id++;
+            const form = document.getElementById('course-form');
+            const newFieldset = document.createElement('fieldset');
+            newFieldset.className = 'wrap';
+
+            newFieldset.innerHTML = `<legend class="sr-only">Course ${id}</legend>
+            <div class="clm" style="gap: 8px;">
+                <label for="course_name_${id}">Course Name (Optional)</label>
+                <input type="text" id="course_name_${id}" placeholder="e.g. Physics">
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="grade_${id}">Grade</label>
+                <select id="grade_${id}" required>
+                    <option value="" disabled selected>Select Grade</option>
+                    <option value="4.33">A+</option>
+                    <option value="4.00">A</option>
+                    <option value="3.67">A-</option>
+                    <option value="3.33">B+</option>
+                    <option value="3.00">B</option>
+                    <option value="2.67">B-</option>
+                    <option value="2.33">C+</option>
+                    <option value="2.00">C</option>
+                    <option value="1.00">D</option>
+                    <option value="0.00">F</option>
+                </select>
+            </div>
+            <div class="clm" style="gap: 8px;">
+                <label for="credits_${id}">Credits</label>
+                <input type="number" id="credits_${id}"  min="0.5" step="0.5" required placeholder="3">
+            </div>
+            <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+            </button>`
+            form.appendChild(newFieldset);
+        }
+
+        function removeCourse(button) {
+            button.closest(".wrap").remove();
+            id--;
         }
 
 
-        // --- 1. CONFIGURATION & DATA ---
-        const gradeScale = [
-            { min: 98, max: 100, letter: "A+ (4.33)", point: 4.33, remark: "Excellent" },
-            { min: 93, max: 97.99, letter: "A (4.00)", point: 4.00, remark: "Outstanding" },
-            { min: 90, max: 92.99, letter: "A- (3.67)", point: 3.67, remark: "Very Strong" },
-            { min: 89, max: 89.99, letter: "AB (3.50)", point: 3.50, remark: "Above Average" },
-            { min: 87, max: 89, letter: "B+ (3.33)", point: 3.33, remark: "Strong" },
-            { min: 83, max: 86.99, letter: "B (3.00)", point: 3.00, remark: "Good" },
-            { min: 80, max: 82.99, letter: "B- (2.67)", point: 2.67, remark: "Slightly Above" },
-            { min: 79, max: 79.99, letter: "BC (2.50)", point: 2.50, remark: "Average+" },
-            { min: 77, max: 79, letter: "C+ (2.33)", point: 2.33, remark: "Satisfactory" },
-            { min: 73, max: 76.99, letter: "C (2.00)", point: 2.00, remark: "Meets Req." },
-            { min: 70, max: 72.99, letter: "C- (1.67)", point: 1.67, remark: "Below Avg" },
-            { min: 69, max: 69.99, letter: "CD (1.50)", point: 1.50, remark: "Low Pass" },
-            { min: 67, max: 69, letter: "D+ (1.33)", point: 1.33, remark: "Poor" },
-            { min: 63, max: 66.99, letter: "D (1.00)", point: 1.00, remark: "Marginal" },
-            { min: 60, max: 62.99, letter: "D- (0.67)", point: 0.67, remark: "Min Pass" },
-            { min: 0, max: 59, letter: "F (0.00)", point: 0.00, remark: "Fail" }
-        ];
+        function calculateGPA() {
 
-        // Base64 SVG for the 'X' icon (Replaces broken external link)
+            const courses = document.querySelectorAll("#course-form .wrap");
 
-
-        // --- 2. DOM ELEMENTS ---
-        const rowsContainer = document.getElementById("rows-container");
-        const btnAdd = document.getElementById("add-course");
-        const btnReset = document.getElementById("reset-rows");
-        const btnSave = document.getElementById("save-data");
-        const btnDownload = document.getElementById("download-csv");
-        const btnClearHistory = document.getElementById("clear-history");
-        const historyContainer = document.getElementById("history-container");
-
-        // Display Elements
-        const dispGPA = document.getElementById("display-gpa");
-        const dispCredits = document.getElementById("display-credits");
-        const dispPoints = document.getElementById("display-points");
-        const dispCourses = document.getElementById("display-courses");
-
-        // --- 3. STATE MANAGEMENT ---
-        let historyData = JSON.parse(localStorage.getItem("lsac_gpa_history")) || [];
-
-        // --- 4. FUNCTIONS ---
-
-        // Generate Grade Options HTML
-        const getGradeOptions = () => {
-            return gradeScale.map(g => `<option value="${g.point}">${g.letter}</option>`).join('');
-        };
-
-        // Create a new input row
-
-        const createRow = () => {
-            // Generate a truly unique ID for this row
-            const uniqueId = Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
-            const rowId = `row-${uniqueId}`;
-
-            const div = document.createElement('div');
-            div.className = 'input-row';
-            div.id = rowId;
-
-            // Notice the 'for', 'id', and 'name' attributes now match uniquely
-            div.innerHTML = `
-                <div class="input">
-                    <label for="name-${uniqueId}">Course Name (optional)</label>
-                    <input id="name-${uniqueId}" name="course_name_${uniqueId}" class="course-name" type="text" placeholder="Example: Constitutional Law">
-                </div>
-                <div class="input">
-                    <label for="credits-${uniqueId}">Credit Hours</label>
-                    <input id="credits-${uniqueId}" name="credit_hours_${uniqueId}" class="credit-hours" type="number" min="0" step="0.5" placeholder="e.g. 3" oninput="calculateGPA()">
-                </div>
-                <div class="input">
-                    <label for="grade-${uniqueId}">Grade</label>
-                    <select id="grade-${uniqueId}" name="grade_${uniqueId}" class="grade-select" onchange="calculateGPA()">
-                        ${getGradeOptions()}
-                    </select>
-                </div>
-                <img src="/src/remove-button-icon.svg" alt="Remove Course Entry" width="37" height="37" onclick="removeRow('${rowId}')">
-            `;
-            rowsContainer.appendChild(div);
-            calculateGPA();
-        };
-
-
-        // Remove a specific row
-        window.removeRow = (id) => {
-            const row = document.getElementById(id);
-            if (row) {
-                row.remove();
-                calculateGPA();
-            }
-            // If all rows are gone, add one empty one
-            if (rowsContainer.children.length === 0) createRow();
-        };
-
-        // Calculate Totals
-        window.calculateGPA = () => {
-            const rows = document.querySelectorAll('.input-row');
-            let totalPoints = 0;
+            let totalQualityPoints = 0;
             let totalCredits = 0;
-            let courseCount = 0;
+            let totalCourses = 0;
 
-            rows.forEach(row => {
-                const credits = parseFloat(row.querySelector('.credit-hours').value);
-                const gradePoint = parseFloat(row.querySelector('.grade-select').value);
+            courses.forEach(course => {
 
-                if (!isNaN(credits) && credits > 0) {
-                    totalPoints += (credits * gradePoint);
+                const grade = parseFloat(course.querySelector("select").value);
+                const credits = parseFloat(course.querySelector("input[type='number']").value);
+
+                if (!isNaN(grade) && !isNaN(credits)) {
+
+                    const qualityPoints = grade * credits;
+
+                    totalQualityPoints += qualityPoints;
                     totalCredits += credits;
-                    courseCount++;
+                    totalCourses++;
+
                 }
+
             });
 
-            const gpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+            const gpa = totalCredits ? totalQualityPoints / totalCredits : 0;
 
-            // Update DOM
-            dispGPA.innerText = gpa.toFixed(2);
-            dispCredits.innerText = totalCredits.toFixed(1);
-            dispPoints.innerText = totalPoints.toFixed(1);
-            dispCourses.innerText = courseCount;
+            document.getElementById("grade_point_average").innerText = gpa.toFixed(2);
+            document.getElementById("total_hours").innerText = totalCredits;
+            document.getElementById("total_courses").innerText = totalCourses;
+            document.getElementById("quality_points").innerText = totalQualityPoints;
 
-            return { gpa, totalCredits, totalPoints, courseCount };
-        };
+        }
 
-        // Render History Table
-        const renderHistory = () => {
-            historyContainer.innerHTML = "";
-            if (historyData.length === 0) {
-                historyContainer.innerHTML = `<p style="text-align: center; color: #999; padding: 10px; margin: 0;">No history saved yet.</p>`;
-                return;
-            }
 
-            historyData.forEach((entry) => {
-                const row = document.createElement("div");
-                row.className = "table-row";
-                row.innerHTML = `
-                    <span role="cell">${entry.gpa}</span>
-                    <span role="cell">${entry.credits}</span>
-                    <span role="cell">${entry.courses}</span>
-                    <span role="cell">${entry.date}</span>
-                `;
-                historyContainer.appendChild(row);
-            });
-        };
+        function resetCalculator() {
 
-        // Save current calculation
-        const saveToHistory = () => {
-            const data = calculateGPA();
-            if (data.totalCredits === 0) {
-                alert("Please enter at least one course with valid credits to save.");
-                return;
-            }
+            const form = document.getElementById("course-form");
 
-            const newEntry = {
-                gpa: data.gpa.toFixed(2),
-                credits: data.totalCredits,
-                courses: data.courseCount,
-                date: new Date().toLocaleDateString()
-            };
+            // saare courses remove
+            form.innerHTML = "";
 
-            historyData.unshift(newEntry); // Add to top
-            localStorage.setItem("lsac_gpa_history", JSON.stringify(historyData));
-            renderHistory();
-        };
+            // id reset
+            id = 0;
 
-        // Clear History
-        const wipeHistory = () => {
-            if (confirm("Are you sure you want to delete all history?")) {
-                historyData = [];
-                localStorage.removeItem("lsac_gpa_history");
-                renderHistory();
-            }
-        };
+            // default courses dobara add
+            addCourse();
+            addCourse();
 
-        // Download CSV
-        const downloadHistory = () => {
-            if (historyData.length === 0) {
-                alert("No history to download.");
-                return;
-            }
+            console.clear();
 
-            let csvContent = "data:text/csv;charset=utf-8,";
-            csvContent += "Date,GPA,Total Credits,Total Courses\n";
+        }
 
-            historyData.forEach(row => {
-                csvContent += `${row.date},${row.gpa},${row.credits},${row.courses}\n`;
-            });
 
-            const encodedUri = encodeURI(csvContent);
-            const link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "lsac_gpa_history.csv");
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        };
-
-        // Reset Form
-        const resetCalculator = () => {
-            rowsContainer.innerHTML = "";
-            createRow(); // Start fresh
-            createRow(); // Add a second one for convenience
-            calculateGPA();
-        };
-
-        // --- 5. EVENT LISTENERS ---
-        btnAdd.addEventListener("click", createRow);
-        btnReset.addEventListener("click", resetCalculator);
-        btnSave.addEventListener("click", saveToHistory);
-        btnClearHistory.addEventListener("click", wipeHistory);
-        btnDownload.addEventListener("click", downloadHistory);
-
-        // --- 6. INITIALIZATION ---
-        // Create initial rows
-        createRow();
-        createRow();
-        renderHistory();
+        addCourse();
+        addCourse()
     </script>
-
 </body>
 </html>
