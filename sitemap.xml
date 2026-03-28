@@ -1,103 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Home Page -->
+  <!-- HOME -->
   <url>
     <loc>https://livegrade.site/</loc>
-    <lastmod>2026-02-03T12:31:44+00:00</lastmod>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
-  <!-- LSAC FAQs PAGE -->
+  <!-- 🔥 CORE CALCULATORS (HIGHEST PRIORITY) -->
   <url>
-    <loc>https://livegrade.site/lsac-gpa-faqs.html</loc>
-    <lastmod>2026-01-10T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- UOG CGPA Calculator -->
-  <url>
-    <loc>https://livegrade.site/uog-cgpa-calculator.html</loc>
-    <lastmod>2026-01-17T12:31:44+00:00</lastmod>
+    <loc>https://livegrade.site/iiui-gpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
-
-  <!-- how to calculate lsac gpa -->
   <url>
     <loc>https://livegrade.site/calculate-lsac-gpa.html</loc>
-    <lastmod>2026-01-18T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-  </url>
-
-
-  <!-- Mandatory Webpages of LiveGrade site -->
-  <url>
-    <loc>https://livegrade.site/about-us.html</loc>
-    <lastmod>2026-02-01T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://livegrade.site/contact-us.html</loc>
-    <lastmod>2026-02-01T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://livegrade.site/privacy-policy.html</loc>
-    <lastmod>2026-02-01T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://livegrade.site/terms-and-conditions.html</loc>
-    <lastmod>2026-02-01T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://livegrade.site/disclaimer.html</loc>
-    <lastmod>2026-02-01T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://livegrade.site/lsu-cumulative-gpa-calculator.html</loc>
-    <lastmod>2026-02-03T12:31:44+00:00</lastmod>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
     <loc>https://livegrade.site/caspa-gpa-calculator.html</loc>
-    <lastmod>2026-02-07T12:31:44+00:00</lastmod>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
+  </url>
+
+  <!-- 🎯 UNIVERSITY CALCULATORS (HIGH PRIORITY) -->
+  <url>
+    <loc>https://livegrade.site/comsats-gpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/uet-gpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/umt-gpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/uaf-cgpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/uog-cgpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/lsu-cumulative-gpa-calculator.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://livegrade.site/vit-gpa-calculator.html</loc>
-    <lastmod>2026-02-13T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 📘 SUPPORTING SEO PAGES -->
+  <url>
+    <loc>https://livegrade.site/lsac-gpa-faqs.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- 🏢 STATIC / LEGAL -->
+  <url>
+    <loc>https://livegrade.site/about-us.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://livegrade.site/comsats-gpa-calculator.html</loc>
-    <lastmod>2026-02-26T12:31:44+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
+    <loc>https://livegrade.site/contact-us.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
   </url>
-  
-  
+
+  <url>
+    <loc>https://livegrade.site/disclaimer.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/privacy-policy.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://livegrade.site/terms-and-conditions.html</loc>
+    <lastmod>2026-03-28T19:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
 </urlset>
