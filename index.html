@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <!-- Core Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,8 +44,8 @@
     <meta name="twitter:image" content="/img/lsac-gpa-converter-tool.png">
 
     <!-- Branding & UI -->
-    <meta name="theme-color" content="#2D2D2D">
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+    <meta name="theme-color" content="#FF4500">
+    <link rel="icon" type="image/png" href="/src/favicon.ico">
 
     <!-- Author & Publishing Signals -->
     <meta name="author" content="Usama Saeed - Live Grade">
@@ -173,76 +175,23 @@ US law school GPA calculator, LSAC GPA formula tool
 
 
 
-
-
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does LSAC count retaken courses?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LSAC includes both attempts of a course regardless of institutional grade replacement policies. This means both the failed and repeated grade are factored into the CAS GPA calculation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can LSAC GPA exceed 4.0?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LSAC uses a 4.33 scale for A+ grades. Because of this, applicants with A+ grades can have a CAS GPA above 4.0."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do law schools use LSAC GPA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Law schools use the LSAC CAS GPA as the standardized GPA for admissions decisions rather than individual transcript GPAs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do withdrawals affect GPA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Non-punitive withdrawals (W, WP) are excluded from GPA calculation. Punitive withdrawals (WF, WU) are counted as 0.00 in the GPA calculation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does graduate school count toward LSAC GPA?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. LSAC GPA only includes undergraduate coursework completed before the first bachelor’s degree is awarded. Graduate-level coursework is excluded from CAS GPA calculations."
-      }
-    }
-  ]
-}
-</script>
-
-
-    <!-- Google Analytec  -->
+    <!-- Google Analytic -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSXB5G97K8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-YSXB5G97K8');
-    </script>
+    </script> 
+
+    <!-- Monetag Scripts -->
+    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
+    
 
     <!-- Google Adsens
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5118554117280809"
      crossorigin="anonymous"></script> 
     -->
-
-    <!-- Monetag Scripts -->
-    <script>(function(s){s.dataset.zone='10621033',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script> 
-    
 
 </head>
 
@@ -285,7 +234,108 @@ US law school GPA calculator, LSAC GPA formula tool
         <div class="tool clm" id="lsac-gpa-calculator"
             style="align-self: center; justify-self: center; margin-top: -100px;" role="main">
 
-            <form id="course-form" action="#" onsubmit="return false;" class="clm"></form>
+            <!-- <form id="course-form" action="#" onsubmit="return false;" class="clm"></form> -->
+            <form id="course-form" action="#" onsubmit="return false;" class="clm">
+                <fieldset class="wrap">
+                    <legend class="sr-only">Course 1</legend>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="course_name_1">Course Name</label>
+                        <input type="text" id="course_name_1" placeholder="e.g. Constitutional Law">
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="grade_1">LSAC Grade</label>
+                        <select id="grade_1" required="" aria-label="Select Grade">
+                            <option value="" disabled="" selected="">Select</option>
+                            <option value="4.33">A+</option>
+                            <option value="4.00">A</option>
+                            <option value="3.67">A-</option>
+                            <option value="3.33">B+</option>
+                            <option value="3.00">B</option>
+                            <option value="2.67">B-</option>
+                            <option value="2.33">C+</option>
+                            <option value="2.00">C</option>
+                            <option value="1.67">C-</option>
+                            <option value="1.33">D+</option>
+                            <option value="1.00">D</option>
+                            <option value="0.67">D-</option>
+                            <option value="0.00">F</option>
+                        </select>
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="credits_1">Credits</label>
+                        <input type="number" id="credits_1" min="0.5" step="0.5" required="" placeholder="3">
+                    </div>
+                    <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                        <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+                    </button>
+                </fieldset>
+                <fieldset class="wrap">
+                    <legend class="sr-only">Course 2</legend>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="course_name_2">Course Name</label>
+                        <input type="text" id="course_name_2" placeholder="e.g. Constitutional Law">
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="grade_2">LSAC Grade</label>
+                        <select id="grade_2" required="" aria-label="Select Grade">
+                            <option value="" disabled="" selected="">Select</option>
+                            <option value="4.33">A+</option>
+                            <option value="4.00">A</option>
+                            <option value="3.67">A-</option>
+                            <option value="3.33">B+</option>
+                            <option value="3.00">B</option>
+                            <option value="2.67">B-</option>
+                            <option value="2.33">C+</option>
+                            <option value="2.00">C</option>
+                            <option value="1.67">C-</option>
+                            <option value="1.33">D+</option>
+                            <option value="1.00">D</option>
+                            <option value="0.67">D-</option>
+                            <option value="0.00">F</option>
+                        </select>
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="credits_2">Credits</label>
+                        <input type="number" id="credits_2" min="0.5" step="0.5" required="" placeholder="3">
+                    </div>
+                    <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                        <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+                    </button>
+                </fieldset>
+                <fieldset class="wrap">
+                    <legend class="sr-only">Course 3</legend>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="course_name_3">Course Name</label>
+                        <input type="text" id="course_name_3" placeholder="e.g. Constitutional Law">
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="grade_3">LSAC Grade</label>
+                        <select id="grade_3" required="" aria-label="Select Grade">
+                            <option value="" disabled="" selected="">Select</option>
+                            <option value="4.33">A+</option>
+                            <option value="4.00">A</option>
+                            <option value="3.67">A-</option>
+                            <option value="3.33">B+</option>
+                            <option value="3.00">B</option>
+                            <option value="2.67">B-</option>
+                            <option value="2.33">C+</option>
+                            <option value="2.00">C</option>
+                            <option value="1.67">C-</option>
+                            <option value="1.33">D+</option>
+                            <option value="1.00">D</option>
+                            <option value="0.67">D-</option>
+                            <option value="0.00">F</option>
+                        </select>
+                    </div>
+                    <div class="clm" style="gap: 8px;">
+                        <label for="credits_3">Credits</label>
+                        <input type="number" id="credits_3" min="0.5" step="0.5" required="" placeholder="3">
+                    </div>
+                    <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+                        <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+                    </button>
+                </fieldset>
+            </form>
 
             <div class="wrap btn-section" style="width: 100%; justify-content: flex-end;">
                 <button type="button" onclick="addCourse()" class="btn">Add Course</button>
@@ -293,687 +343,53 @@ US law school GPA calculator, LSAC GPA formula tool
                 <button type="reset" onclick="resetCalculator()" class="btn">Reset All</button>
             </div>
 
-            <ul class="wrap" style="margin-top: 32px;">
-                <li class="clm"
-                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
-                    <output id="grade_point_average">0.00</output>
-                    <strong>Grade Point Average</strong>
-                </li>
-                <li class="clm"
-                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
-                    <output id="quality_points">0.00</output>
-                    <strong>Quality Points</strong>
-                </li>
-                <li class="clm"
-                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
-                    <output id="total_hours">0.00</output>
-                    <strong>Credit Hours</strong>
-                </li>
-                <li class="clm"
-                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px;">
-                    <output id="total_courses">0.00</output>
-                    <strong>Total Courses</strong>
-                </li>
-            </ul>
+
+            <section class="wrap" style="margin-top: 32px;" aria-live="polite"
+                aria-label="LSAC GPA Calculation Results">
+
+                <div class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px; text-align: center;">
+                    <output id="grade_point_average"
+                        style="font-size: 1.8rem; font-weight: bold; color: var(--primary-color, #2c3e50);">0.00</output>
+                    <strong style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px;">LSAC
+                        GPA</strong>
+                </div>
+
+                <div class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px; text-align: center;">
+                    <output id="quality_points" style="font-size: 1.2rem; font-weight: 600;">0.00</output>
+                    <strong style="font-size: 0.8rem; color: #666;">Quality Points</strong>
+                </div>
+
+                <div class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px; text-align: center;">
+                    <output id="total_hours" style="font-size: 1.2rem; font-weight: 600;">0.00</output>
+                    <strong style="font-size: 0.8rem; color: #666;">Credit Hours</strong>
+                </div>
+
+                <div class="clm"
+                    style="background-color: var(--gray); padding: 20px; border-radius: 4px; flex-grow: 1; gap: 4px; text-align: center;">
+                    <output id="total_courses" style="font-size: 1.2rem; font-weight: 600;">0.00</output>
+                    <strong style="font-size: 0.8rem; color: #666;">Total Courses</strong>
+                </div>
+
+            </section>
+
+            <p>This LSAC GPA Calculator follows the official Law School Admission Council (LSAC) CAS guidelines,
+                converting letter grades to a 4.33 scale, including A+ as 4.33 and punitive failing grades as 0.00.</p>
         </div>
 
-
-        <section class="clm cent">
-            <h2>How to Use This Online LSAC GPA Calculator</h2>
-            <p>To get an accurate Law School Admission Council (LSAC) GPA estimate, follow these steps:</p>
-            <ol class="clm" style="padding-left: 40px;">
-                <li class="clm">
-                    <h3>Enter Your Grades:</h3>
-                    <p>Select your letter grade (A+, A, B, etc.) as it appears on your transcript.</p>
-                </li>
-                <li class="clm">
-                    <h3>Add Credit Hours:</h3>
-                    <p>Input the number of credits assigned to each course.</p>
-                </li>
-                <li class="clm">
-                    <h3>Automatic Calculation:</h3>
-                    <p>The tool will instantly apply the LSAC 4.33 conversion scale to provide your total Quality Points
-                        and final CAS GPA.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="why-lsac-gpa" class="clm cent">
-            <h2>Why Law Schools Use the LSAC CAS GPA</h2>
-            <p>
-                The <strong>LSAC GPA</strong> (also known as the Credential Assembly Service or <strong>CAS
-                    GPA</strong>) is the standard metric used by the <strong>American Bar Association (ABA)</strong> to
-                rank law school applicants. Since every university has a different grading system, the Law School
-                Admission Council standardizes all undergraduate transcripts to ensure a level playing field for all
-                candidates.
-            </p>
-
-            <div class="pro-tip"
-                style="background-color: #f0f7ff; border-left: 5px solid #007bff; padding: 15px; margin: 20px 0;">
-                <strong>Pro Tip:</strong> Your undergraduate transcript GPA and your official LSAC GPA will likely
-                differ due to how the council treats retakes and non-punitive withdrawals.
-            </div>
-        </section>
-
-        <hr>
-
-        <section id="lsac-formula" class="clm cent">
-            <h2>The LSAC GPA Calculation Formula</h2>
-            <p>
-                Our calculator uses the official mathematical methodology provided by LSAC. The formula is:
-            </p>
-
-            <div class="formula-container" style="text-align: center; padding: 20px 0;">
-                CAS GPA =
-            </div>
-
-            <p>
-                This means that an <strong>A+</strong> is weighted at <strong>4.33</strong>, providing a significant
-                boost compared to the standard 4.0 scale used by most U.S. colleges and universities.
-            </p>
-        </section>
-
-         <section class="clm cent">
-            
-
-            <h3 style="margin-top: 28px;">Explanation</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Convert each grade into LSAC grade points</li>
-                <li>Multiply each grade point by its credit hours</li>
-                <li>Add all grade points together</li>
-                <li>Divide by total graded credits</li>
-            </ul>
-
-            <p>
-                The challenge is not the mathematical formula itself, it is understanding which credits and grades are
-                included in the calculation.
-            </p>
-
-            <h3 style="margin-top: 28px;">Formula</h3>
-
-            <pre><code>
-    CAS GPA = Σ (Grade Points × Credit Hours)
-                ------------------------------
-                    Total Graded Credits
-  </code></pre>
-
-            <h3 style="margin-top: 28px;">Simplified Explanation</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Grade Points &multimap; Credits = Total Points</li>
-                <li>Total Points ÷ Total Credits = GPA</li>
-            </ul>
-
-            <p>
-                The complexity is not in the math, it lies in determining which courses are counted under LSAC rules.
-            </p>
-        </section>
-
-    
-
-        <section class="clm cent">
-            <h2>What Is LSAC GPA (CAS GPA)?</h2>
-            <p>The LSAC GPA, also called the Credential Assembly Service (CAS) GPA, is a standardized GPA calculated
-                from all undergraduate coursework completed before your first bachelor's degree.</p>
-
-            <div class="clm" style="padding: 20px; border-left: 4px solid orangered; background-color: var(--gray);">
-                <h3>Key Definition:</h3>
-                <p>LSAC GPA = A unified GPA based on all graded undergraduate credits across all institutions.</p>
-            </div>
-
-            <h3>Why It Matters:</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Law schools do not use your transcript GPA.</li>
-                <li>Your CAS GPA is the official number used in admissions.</li>
-                <li>It is reported to the ABA (American Bar Association) for law school rankings</li>
-            </ul>
-        </section>
-
-
-        <section class="clm cent">
-            <h2>Why Your LSAC GPA Is Different from Your Transcript GPA</h2>
-            <p>Most applicants notice a difference between their transcript GPA and LSAC GPA. This happens due to strict
-                standardization rules.</p>
-
-            <h3 style="margin-top: 28px;">
-                Retaken Courses (No Grade Replacement)
-            </h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Universities may replace old grades</li>
-                <li>LSAC includes both attempts</li>
-            </ul>
-            <p>Even if you improve your grade, the original grade still impacts your GPA.</p>
-
-
-            <h3 style="margin-top: 28px;">Transfer & Community College Credits</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>All institutions are included</li>
-                <li>Community college grades count</li>
-            </ul>
-            <p>Even grades that never affected your university GPA are included.</p>
-
-            <h3 style="margin-top: 28px;">A+ Grades (4.33 Scale Advantage)</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>LSAC assigns 4.33 to A+</li>
-                <li>Many universities cap at 4.0</li>
-            </ul>
-            <p>Your LSAC GPA can exceed 4.0.</p>
-
-
-            <h3 style="margin-top: 28px;">Pass/Fail & Withdrawals</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Passing grades (P, CR) excluded</li>
-                <li>Failing grades counted as 0.00</li>
-                <li>Punitive withdrawals (WF, WU, WNP) counted as failing</li>
-            </ul>
-
-
-            <h3 style="margin-top: 28px;">Academic Forgiveness Policies Ignored</h3>
-            <ul class="clm" style="padding-left: 40px;">
-                <li>Some universities remove low grades</li>
-                <li>LSAC still counts them if visible on transcript</li>
-            </ul>
-            <p>This is a major reason GPAs drop.</p>
-        </section>
-
-
-
-
-
-       
-
-
-
-
-
-
-        <section class="clm cent">
-            <h2>LSAC Grade Conversion & Weighting Table</h2>
-
-            <p>
-                While calculating, it is vital to understand the numerical value assigned to each letter grade under the LSAC methodology.
-            </p>
-
-            <div class="table-container">
-                <table style="margin-top: 28px;">
-                    <thead>
-                        <tr>
-                            <th>LSAC GPA Value</th>
-                            <th>Letter Grade</th>
-                            <th>Typical Percentage Range</th>
-                            <th>Academic Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>4.33</td>
-                            <td>A+</td>
-                            <td>98 &ndash; 100</td>
-                            <td>Highest level of achievement</td>
-                        </tr>
-                        <tr>
-                            <td>4.00</td>
-                            <td>A</td>
-                            <td>93 &ndash; 97</td>
-                            <td>Excellent performance</td>
-                        </tr>
-                        <tr>
-                            <td>3.67</td>
-                            <td>A-</td>
-                            <td>90 &ndash; 92</td>
-                            <td>Very strong academic record</td>
-                        </tr>
-                        <tr>
-                            <td>3.33</td>
-                            <td>B+</td>
-                            <td>87 &ndash; 89</td>
-                            <td>Above-average achievement</td>
-                        </tr>
-                        <tr>
-                            <td>3.00</td>
-                            <td>B</td>
-                            <td>83 &ndash; 86</td>
-                            <td>Good standing</td>
-                        </tr>
-                        <tr>
-                            <td>2.67</td>
-                            <td>B-</td>
-                            <td>80 &ndash; 82</td>
-                            <td>Acceptable performance</td>
-                        </tr>
-                        <tr>
-                            <td>2.33</td>
-                            <td>C+</td>
-                            <td>77 &ndash; 79</td>
-                            <td>Below-average results</td>
-                        </tr>
-                        <tr>
-                            <td>2.00</td>
-                            <td>C</td>
-                            <td>73 &ndash; 76</td>
-                            <td>Minimum satisfactory level</td>
-                        </tr>
-                        <tr>
-                            <td>1.67</td>
-                            <td>C-</td>
-                            <td>70 &ndash; 72</td>
-                            <td>Marginal pass</td>
-                        </tr>
-                        <tr>
-                            <td>1.33</td>
-                            <td>D+</td>
-                            <td>67 &ndash; 69</td>
-                            <td>Poor academic performance</td>
-                        </tr>
-                        <tr>
-                            <td>1.00</td>
-                            <td>D</td>
-                            <td>63 &ndash; 66</td>
-                            <td>Lowest passing grade</td>
-                        </tr>
-                        <tr>
-                            <td>0.67</td>
-                            <td>D-</td>
-                            <td>60 &ndash; 62</td>
-                            <td>Barely passing</td>
-                        </tr>
-                        <tr>
-                            <td>0.00</td>
-                            <td>F</td>
-                            <td>Below 60</td>
-                            <td>Failing grade</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 style="margin-top: 28px;">Important Notes</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>
-                    Intermediate grades such as <strong>AB, BC, and CD</strong> are converted proportionally based on
-                    LSAC grading rules.
-                </li>
-
-                <li>
-                    Numerical grading systems (for example <strong>percentage-based grades like 100%</strong>) are
-                    mapped using LSAC’s official Interpretive Guide (IGUGS).
-                </li>
-
-                <li>
-                    Grade conversions may vary depending on institutional grading policies and transcript structure.
-                </li>
-
-                <li>
-                    School-specific grading systems are standardized by LSAC before GPA calculation.
-                </li>
-            </ul>
-        </section>
-
-
-
-
-        <section class="clm cent">
-            <h2>What Counts in Your LSAC GPA</h2>
-
-            <p>
-                LSAC includes a broad range of undergraduate academic records when calculating your CAS GPA. The goal is
-                full standardization across all institutions.
-            </p>
-
-            <h3 style="margin-top: 28px;">Included in LSAC GPA</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>All undergraduate coursework completed before earning your first bachelor’s degree</li>
-                <li>Courses from every institution attended (all colleges and universities)</li>
-                <li>Repeated courses (both original and repeated attempts are counted)</li>
-                <li>Transfer credits from other institutions</li>
-                <li>Community college coursework</li>
-                <li>Study abroad courses (if recorded on your official transcript)</li>
-                <li>AP / CLEP credits (only if they include grades and credit hours)</li>
-                <li>Credit-bearing practical or physical courses (e.g., PE, ROTC)</li>
-                <li>Punitive withdrawals such as WF, WU, and WNP (treated as failing grades)</li>
-            </ul>
-        </section>
-
-
-
-        <section class="clm cent">
-            <h2>What Does NOT Count in LSAC GPA</h2>
-
-            <p>
-                Certain types of coursework are excluded from LSAC’s CAS GPA calculation. These are removed to maintain
-                standardization across different grading systems.
-            </p>
-
-            <h3 style="margin-top: 28px;">Excluded from LSAC GPA</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>Courses completed after the first bachelor’s degree is awarded</li>
-                <li>Pass/Fail grades (P, CR, S)</li>
-                <li>Non-credit coursework</li>
-                <li>Remedial or developmental courses (if marked as non-standard)</li>
-                <li>Non-punitive withdrawals (W, WP)</li>
-                <li>Incomplete grades (if later marked non-punitive or not converted to a grade)</li>
-                <li>International coursework (unless officially transferred into a U.S./Canadian transcript)</li>
-                <li>Courses without standardized grading conversion rules in LSAC methodology</li>
-            </ul>
-        </section>
-
-
-
-
-        <section class="clm cent">
-            <h2>Real Scenarios: Why Your LSAC GPA Changes</h2>
-
-            <p>
-                Understanding real-world cases helps explain why your LSAC CAS GPA often differs from your university
-                transcript GPA.
-            </p>
-
-            <p>
-                The difference is not random — it comes from LSAC’s standardized rule-based evaluation system.
-            </p>
-
-            <h3 style="margin-top: 28px;">Scenario 1: Retake Impact</h3>
-
-            <p>
-                You fail a course (F) and later retake it and earn an A.
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li><strong>Transcript GPA:</strong> Only the A is counted (depending on institutional policy)</li>
-                <li><strong>LSAC GPA:</strong> Both F (4 credits) and A (4 credits) are included</li>
-            </ul>
-
-            <p>
-                <strong>Result:</strong> GPA decreases because the failed attempt is still included in LSAC calculation.
-            </p>
-
-
-            <h3 style="margin-top: 28px;">Scenario 2: A+ Boost</h3>
-
-            <p>
-                Your institution treats A+ the same as A (4.00 GPA).
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li><strong>Transcript GPA:</strong> A+ = 4.00</li>
-                <li><strong>LSAC GPA:</strong> A+ = 4.33 (on 4.33 scale system)</li>
-            </ul>
-
-            <p>
-                <strong>Result:</strong> LSAC GPA can exceed 4.0, providing a measurable GPA increase.
-            </p>
-
-
-
-            <h3 style="margin-top: 28px;">Scenario 3: Transfer Credit Impact</h3>
-
-            <p>
-                You completed coursework at a community college before transferring to a university.
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li><strong>Transcript GPA:</strong> Transfer grades may be excluded or hidden</li>
-                <li><strong>LSAC GPA:</strong> All transferable credits (e.g., 60 credits) are included</li>
-            </ul>
-
-            <p>
-                <strong>Result:</strong> GPA often decreases if earlier academic performance was lower.
-            </p>
-
-
-            <h3 style="margin-top: 28px;">Scenario 4: Academic Forgiveness Trap</h3>
-
-            <p>
-                Your university replaces or removes a low grade through an academic forgiveness policy.
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li><strong>Transcript GPA:</strong> Old grade is removed or excluded</li>
-                <li><strong>LSAC GPA:</strong> Old grade is still counted if it appears on the transcript record</li>
-            </ul>
-
-            <p>
-                <strong>Result:</strong> Hidden GPA reduction that often surprises applicants during CAS evaluation.
-            </p>
-        </section>
-
-
-
-        <section class="clm cent">
-            <h2>CAS GPA vs Transcript GPA</h2>
-
-            <p>
-                Your transcript GPA and LSAC CAS GPA are calculated using fundamentally different rules. These
-                differences explain most GPA discrepancies applicants experience.
-            </p>
-
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Factor</th>
-                            <th>Transcript GPA</th>
-                            <th>LSAC GPA (CAS)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Retakes</td>
-                            <td>Replaced or excluded (institution-dependent)</td>
-                            <td>Both attempts are counted</td>
-                        </tr>
-                        <tr>
-                            <td>Transfer Credits</td>
-                            <td>Sometimes excluded</td>
-                            <td>Always included if credit-bearing</td>
-                        </tr>
-                        <tr>
-                            <td>A+ Scale</td>
-                            <td>Often capped at 4.0</td>
-                            <td>Up to 4.33 on LSAC scale</td>
-                        </tr>
-                        <tr>
-                            <td>Academic Forgiveness</td>
-                            <td>Applied by university policies</td>
-                            <td>Ignored if grade exists on transcript</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p>
-                These structural differences explain the majority of unexpected changes between institutional GPA and
-                LSAC CAS GPA.
-            </p>
-        </section>
-
-
-
-        <section class="clm cent">
-            <h2>Minimum Credit Rule (Important)</h2>
-
-            <p>
-                LSAC applies a minimum credit threshold to ensure sufficient academic data for a valid CAS GPA
-                calculation.
-            </p>
-
-            <h3 style="margin-top: 28px;">60-Credit Requirement</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>LSAC requires a minimum of <strong>60 graded semester credits</strong></li>
-                <li>If total graded credits are below this threshold:</li>
-                <ul>
-                    <li>No numeric CAS GPA is calculated</li>
-                    <li>Only a qualitative academic summary is provided</li>
-                </ul>
-            </ul>
-        </section>
         <section class="clm cent">
 
-            <h2>Quarter Credits Conversion</h2>
-
-            <p>
-                Some institutions use a quarter system instead of semester hours. LSAC standardizes these credits before
-                calculating CAS GPA.
-            </p>
-
-            <h3 style="margin-top: 28px;">Conversion Rule</h3>
-
-            <pre><code>
-Quarter Credits &multimap; 0.67 = Semester Credits (LSAC Equivalent)
-  </code></pre>
-
-            <h3 style="margin-top: 28px;">Explanation</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>Quarter credits are multiplied by <strong>0.67</strong></li>
-                <li>This converts them into LSAC-equivalent semester credits</li>
-                <li>Converted credits are then included in CAS GPA calculation</li>
-            </ul>
-
-            <h3 style="margin-top: 28px;">Example</h3>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>4 quarter credits → 2.67 semester credits</li>
-            </ul>
-
-            <p>
-                This conversion is part of LSAC’s official Credential Assembly Service (CAS) standardization process.
-            </p>
-        </section>
-
-
-        <section class="clm cent">
-            <h2>What to Do If Your LSAC GPA Is Low</h2>
-
-            <p>
-                A low LSAC CAS GPA is not the end of your law school prospects. Admissions decisions are holistic and
-                heavily weighted on additional factors beyond GPA alone.
-            </p>
-
-            <h3 style="margin-top: 28px;">1. Focus on LSAT Score</h3>
-
-            <p>
-                Your undergraduate GPA is fixed once submitted to LSAC. However, your LSAT score remains fully
-                controllable and is often the strongest compensating factor in admissions decisions.
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>Your GPA cannot be changed after graduation</li>
-                <li>Your LSAT performance can significantly offset a low GPA</li>
-            </ul>
-
-            <h3 style="margin-top: 28px;">2. Write a GPA Addendum</h3>
-
-            <p>
-                A GPA addendum is a short explanatory statement submitted with your application to clarify academic
-                performance issues.
-            </p>
-
-            <p><strong>Common areas to address:</strong></p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>Academic challenges or disruptions</li>
-                <li>GPA inconsistencies or unusual grading patterns</li>
-                <li>Improvement trends in later semesters</li>
-            </ul>
-
-            <h3 style="margin-top: 28px;">3. Apply Strategically</h3>
-
-            <p>
-                Compare your LSAC GPA against the admission statistics of your target law schools.
-            </p>
-
-            <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                <li>25th percentile GPA benchmarks</li>
-                <li>75th percentile GPA benchmarks</li>
-            </ul>
-
-            <p>
-                Strategic targeting improves admission probability even with a below-median GPA.
-            </p>
-        </section>
-
-
-
-
-        <section class="clm cent">
-            <h2>Frequently Asked Questions</h2>
-
-            <details>
-                <summary>Does LSAC count retaken courses?</summary>
-                <p>
-                    Yes. LSAC includes both attempts of a course regardless of institutional grade replacement policies.
-                    This means both the failed and repeated grade are factored into the CAS GPA calculation.
-                </p>
-            </details>
-
-            <details>
-                <summary>Can LSAC GPA exceed 4.0?</summary>
-                <p>
-                    Yes. LSAC uses a 4.33 scale for A+ grades. Because of this, applicants with A+ grades can have a CAS
-                    GPA above 4.0.
-                </p>
-            </details>
-
-            <details>
-                <summary>Do law schools use LSAC GPA?</summary>
-                <p>
-                    Yes. Law schools use the LSAC CAS GPA as the standardized GPA for admissions decisions rather than
-                    individual transcript GPAs.
-                </p>
-            </details>
-
-            <details>
-                <summary>Do withdrawals affect GPA?</summary>
-                <p>
-                    Withdrawals are treated differently depending on type:
-                </p>
-                <ul class="clm" style="padding-left: 40px; margin-top: 16px;">
-                    <li><strong>Non-punitive withdrawals (W, WP):</strong> Excluded from GPA calculation</li>
-                    <li><strong>Punitive withdrawals (WF, WU):</strong> Counted as 0.00 in GPA calculation</li>
-                </ul>
-            </details>
-
-            <details>
-                <summary>Does graduate school count toward LSAC GPA?</summary>
-                <p>
-                    No. LSAC GPA only includes undergraduate coursework completed before the first bachelor’s degree is
-                    awarded.
-                    Graduate-level coursework is excluded from CAS GPA calculations.
-                </p>
-            </details>
+            <h3>How LSAC GPA is Calculated?</h3>
+            <p>Unlike standard university GPAs, the <strong>LSAC (Law School Admission Council)</strong> assigns a
+                value of 4.33 to an A+. All failing grades (F) are weighted as 0.00, regardless of school policy.
+                Our tool uses the standard 4.33 conversion table to ensure accuracy for your CAS report.</p>
 
         </section>
 
 
-        <section class="clm cent" id="bulisher">
-            <h2>About the Developer:</h2>
-            <p>Hi, I'm Usama, a web developer with over five years of experience building reliable, student-focused
-                academic tools. I specialize in developing calculators and conversion tools that simplify complex
-                processes for students applying to higher education programs.</p>
 
-            <p>I created LiveGrade to help law students accurately calculate and convert their GPA using clear and
-                transparent methods. This LSAC GPA Calculator was developed following the official LSAC grade conversion
-                rules, allowing students to see exactly how their grades translate into a law school-ready GPA.</p>
-
-            <p>While this tool provides accurate estimates based on the LSAC calculation methodology, the final and
-                official GPA is determined by LSAC through the Credential Assembly Service (CAS). My goal is to reduce
-                confusion, improve clarity, and help students feel confident as they prepare for law school
-                applications.</p>
-
-            <p>This tool is independently developed and is not affiliated with or endorsed by LSAC. All calculations are
-                based on publicly available LSAC documentation.</p>
-
-            <h3 style="margin-top: 28px;">Sources, and Last Updated:</h3>
-            <p>All information and methodology used in this calculator are based on official LSAC Credential Assembly
-                Service (CAS) policies.</p>
-
-            <h3 style="margin-top: 28px;">Last Updated</h3>
-            <span>January 2026</span>
-        </section>
 
     </main>
 
@@ -1044,41 +460,43 @@ Quarter Credits &multimap; 0.67 = Semester Credits (LSAC Equivalent)
 
 
     <script>
-        let id = 0;
+        let id = 3;
         function addCourse() {
             id++;
             const form = document.getElementById('course-form');
             const newFieldset = document.createElement('fieldset');
             newFieldset.className = 'wrap';
 
-            newFieldset.innerHTML = `<legend class="sr-only">Course ${id}</legend>
-            <div class="clm" style="gap: 8px;">
-                <label for="course_name_${id}">Course Name (Optional)</label>
-                <input type="text" id="course_name_${id}" placeholder="e.g. Physics">
-            </div>
-            <div class="clm" style="gap: 8px;">
-                <label for="grade_${id}">LSAC Grade</label>
-                <select id="grade_${id}" required>
-                    <option value="" disabled selected>Select Grade</option>
-                    <option value="4.33">A+</option>
-                    <option value="4.00">A</option>
-                    <option value="3.67">A-</option>
-                    <option value="3.33">B+</option>
-                    <option value="3.00">B</option>
-                    <option value="2.67">B-</option>
-                    <option value="2.33">C+</option>
-                    <option value="2.00">C</option>
-                    <option value="1.00">D</option>
-                    <option value="0.00">F</option>
-                </select>
-            </div>
-            <div class="clm" style="gap: 8px;">
-                <label for="credits_${id}">LSAC Credit Hours</label>
-                <input type="number" id="credits_${id}"  min="0.5" step="0.5" required placeholder="3">
-            </div>
-            <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
-                <img src="/src/remove-button-icon.svg" alt="Remove Course from LSAC Calculator" width="20" height="20">
-            </button>`
+            // Yahan maine missing grades (C-, D+, D-) add kar diye hain accuracy ke liye
+            newFieldset.innerHTML = `
+        <legend class="sr-only">Course ${id}</legend>
+        <div class="clm" style="gap: 8px;">
+            <label for="course_name_${id}">Course Name</label>
+            <input type="text" id="course_name_${id}" placeholder="e.g. Constitutional Law">
+        </div>
+        <div class="clm" style="gap: 8px;">
+            <label for="grade_${id}">LSAC Grade</label>
+            <select id="grade_${id}" required aria-label="Select Grade">
+                <option value="" disabled selected>Select</option>
+                <option value="4.33">A+</option>
+                <option value="4.00">A</option>
+                <option value="3.67">A-</option>
+                <option value="3.33">B+</option>
+                <option value="3.00">B</option>
+                <option value="2.67">B-</option>
+                <option value="2.33">C+</option>
+                <option value="2.00">C</option>
+                <option value="1.67">C-</option> <option value="1.33">D+</option> <option value="1.00">D</option>
+                <option value="0.67">D-</option> <option value="0.00">F</option>
+            </select>
+        </div>
+        <div class="clm" style="gap: 8px;">
+            <label for="credits_${id}">Credits</label>
+            <input type="number" id="credits_${id}" min="0.5" step="0.5" required placeholder="3">
+        </div>
+        <button type="button" class="remove-btn" onclick="removeCourse(this)" aria-label="Remove Course">
+            <img src="/src/remove-button-icon.svg" alt="Remove" width="20" height="20">
+        </button>`;
             form.appendChild(newFieldset);
         }
 
@@ -1118,7 +536,7 @@ Quarter Credits &multimap; 0.67 = Semester Credits (LSAC Equivalent)
             document.getElementById("grade_point_average").innerText = gpa.toFixed(2);
             document.getElementById("total_hours").innerText = totalCredits;
             document.getElementById("total_courses").innerText = totalCourses;
-            document.getElementById("quality_points").innerText = totalQualityPoints;
+            document.getElementById("quality_points").innerText = totalQualityPoints.toFixed(2);
 
         }
 
@@ -1136,16 +554,7 @@ Quarter Credits &multimap; 0.67 = Semester Credits (LSAC Equivalent)
             // default courses dobara add
             addCourse();
             addCourse();
-
-            console.clear();
-
         }
-
-        addCourse();
-        addCourse();
-        addCourse();
-        addCourse();
-        addCourse();
     </script>
 </body>
 
